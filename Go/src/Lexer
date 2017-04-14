@@ -1,0 +1,81 @@
+import java.lang.System;
+import java.io.*;
+
+class Lexer {
+
+	Yylex tokenizer;
+	public  Lexer(String fileName) 
+	{
+	  try
+	  {
+	  tokenizer=new Yylex(new BufferedReader(new FileReader(fileName)));
+	  }
+	  catch(Exception e)
+	  {
+	  
+	  }	 
+	}
+	public Token nextToken()
+	{
+		Token next=null;
+		try
+		{
+		 next=  tokenizer.getToken();
+		}
+		catch(Exception e)
+		{
+		}
+		return next;
+	}
+	}
+
+
+%%
+
+
+%function getToken
+%type Token
+%char
+%line
+
+
+%{
+	//initialize  variables to be used by class
+%}
+
+
+%init{
+
+//Add code to be executed on initialization of the lexer
+
+%init}
+IMPORT =import SPACE STRING_LIT BREAKLINE
+PACKAGE =package SPACE IDENTIFIER BREAKLINE
+SPACE =[\n\ \t\b\012]
+BREAKLINE =\n
+FUNC=func
+STRING_LIT = (\"[A-Za-z]+\")
+CONST=const
+EQUAL=[\=]
+IDENTIFIER=[A-Za-z]+
+
+%eofval{
+//Add code to be executed when the end of the file is reached
+%eofval}
+
+
+%% 
+<YYINITIAL> {PACKAGE} { return (new Token(Token.PACKAGE,yytext()));}
+<YYINITIAL> {SPACE} {}
+<YYINITIAL> {BREAKLINE} {}
+<YYINITIAL> {IMPORT} { return (new Token(Token.IMPORT,yytext()));}
+<YYINITIAL> {FUNC} { return (new Token(Token.FUNC,yytext()));}
+<YYINITIAL> {STRING_LIT} { return (new Token(Token.STRING_LIT,yytext()));}
+<YYINITIAL> {CONST} { return (new Token(Token.CONST,yytext()));}
+<YYINITIAL> {EQUAL} { return (new Token(Token.EQUAL,yytext()));}
+
+<YYINITIAL> {IDENTIFIER} { return (new Token(Token.IDENTIFIER,yytext()));}
+
+<YYINITIAL> . {
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
