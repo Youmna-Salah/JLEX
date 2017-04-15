@@ -1,9 +1,7 @@
 PACKAGE : package
 IDENTIFIER : main
 IMPORT : import
-ERROR: Invalid input: "
-IDENTIFIER : fmt
-ERROR: Invalid input: "
+STRING_LIT : "fmt"
 FUNC : func
 IDENTIFIER : main
 OPEN_PARAN : (
@@ -23,10 +21,7 @@ IDENTIFIER : fmt
 DOT : .
 IDENTIFIER : Println
 OPEN_PARAN : (
-ERROR: Invalid input: "
-IDENTIFIER : emp
-COLON : :
-ERROR: Invalid input: "
+STRING_LIT : "emp:"
 COMMA : ,
 IDENTIFIER : s
 CLOSE_PARAN : )
@@ -35,38 +30,28 @@ OPEN_SQUARE : [
 INT_LIT : 0
 CLOSE_SQUARE : ]
 EQUAL : =
-ERROR: Invalid input: "
-IDENTIFIER : a
-ERROR: Invalid input: "
+STRING_LIT : "a"
 IDENTIFIER : s
 OPEN_SQUARE : [
 INT_LIT : 1
 CLOSE_SQUARE : ]
 EQUAL : =
-ERROR: Invalid input: "
-IDENTIFIER : b
-ERROR: Invalid input: "
+STRING_LIT : "b"
 IDENTIFIER : s
 OPEN_SQUARE : [
 INT_LIT : 2
 CLOSE_SQUARE : ]
 EQUAL : =
-ERROR: Invalid input: "
-IDENTIFIER : c
-ERROR: Invalid input: "
+STRING_LIT : "c"
 IDENTIFIER : s
 DOT : .
 IDENTIFIER : append
 OPEN_PARAN : (
 IDENTIFIER : s
 COMMA : ,
-ERROR: Invalid input: "
-IDENTIFIER : e
-ERROR: Invalid input: "
+STRING_LIT : "e"
 COMMA : ,
-ERROR: Invalid input: "
-IDENTIFIER : f
-ERROR: Invalid input: "
+STRING_LIT : "f"
 CLOSE_PARAN : )
 IDENTIFIER : l
 COLON_EQUAL : :=
@@ -80,10 +65,7 @@ IDENTIFIER : fmt
 DOT : .
 IDENTIFIER : Println
 OPEN_PARAN : (
-ERROR: Invalid input: "
-IDENTIFIER : sl1
-COLON : :
-ERROR: Invalid input: "
+STRING_LIT : "sl1:"
 COMMA : ,
 IDENTIFIER : l
 CLOSE_PARAN : )
@@ -98,10 +80,7 @@ IDENTIFIER : fmt
 DOT : .
 IDENTIFIER : Println
 OPEN_PARAN : (
-ERROR: Invalid input: "
-IDENTIFIER : sl2
-COLON : :
-ERROR: Invalid input: "
+STRING_LIT : "sl2:"
 COMMA : ,
 IDENTIFIER : l
 CLOSE_PARAN : )
@@ -116,10 +95,7 @@ IDENTIFIER : fmt
 DOT : .
 IDENTIFIER : Println
 OPEN_PARAN : (
-ERROR: Invalid input: "
-IDENTIFIER : sl3
-COLON : :
-ERROR: Invalid input: "
+STRING_LIT : "sl3:"
 COMMA : ,
 IDENTIFIER : l
 CLOSE_PARAN : )
@@ -129,26 +105,17 @@ OPEN_SQUARE : [
 CLOSE_SQUARE : ]
 IDENTIFIER : string
 OPEN_CURLY : {
-ERROR: Invalid input: "
-IDENTIFIER : g
-ERROR: Invalid input: "
+STRING_LIT : "g"
 COMMA : ,
-ERROR: Invalid input: "
-IDENTIFIER : h
-ERROR: Invalid input: "
+STRING_LIT : "h"
 COMMA : ,
-ERROR: Invalid input: "
-IDENTIFIER : i
-ERROR: Invalid input: "
+STRING_LIT : "i"
 CLOSE_CURLY : }
 IDENTIFIER : fmt
 DOT : .
 IDENTIFIER : Println
 OPEN_PARAN : (
-ERROR: Invalid input: "
-IDENTIFIER : dcl
-COLON : :
-ERROR: Invalid input: "
+STRING_LIT : "dcl:"
 COMMA : ,
 IDENTIFIER : t
 CLOSE_PARAN : )
@@ -226,11 +193,7 @@ IDENTIFIER : fmt
 DOT : .
 IDENTIFIER : Println
 OPEN_PARAN : (
-ERROR: Invalid input: "
-INT_LIT : 2
-IDENTIFIER : d
-COLON : :
-ERROR: Invalid input: "
+STRING_LIT : "2d: "
 COMMA : ,
 IDENTIFIER : twoD
 CLOSE_PARAN : )

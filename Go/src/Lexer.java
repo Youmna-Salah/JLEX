@@ -273,11 +273,11 @@ class Yylex {
 		/* 34 */ YY_NOT_ACCEPT,
 		/* 35 */ YY_NO_ANCHOR,
 		/* 36 */ YY_NO_ANCHOR,
-		/* 37 */ YY_NO_ANCHOR,
-		/* 38 */ YY_NOT_ACCEPT,
+		/* 37 */ YY_NOT_ACCEPT,
+		/* 38 */ YY_NO_ANCHOR,
 		/* 39 */ YY_NO_ANCHOR,
 		/* 40 */ YY_NO_ANCHOR,
-		/* 41 */ YY_NOT_ACCEPT,
+		/* 41 */ YY_NO_ANCHOR,
 		/* 42 */ YY_NO_ANCHOR,
 		/* 43 */ YY_NO_ANCHOR,
 		/* 44 */ YY_NO_ANCHOR,
@@ -287,7 +287,7 @@ class Yylex {
 		/* 48 */ YY_NO_ANCHOR,
 		/* 49 */ YY_NO_ANCHOR,
 		/* 50 */ YY_NO_ANCHOR,
-		/* 51 */ YY_NOT_ACCEPT,
+		/* 51 */ YY_NO_ANCHOR,
 		/* 52 */ YY_NO_ANCHOR,
 		/* 53 */ YY_NO_ANCHOR,
 		/* 54 */ YY_NO_ANCHOR,
@@ -303,41 +303,37 @@ class Yylex {
 		/* 64 */ YY_NO_ANCHOR,
 		/* 65 */ YY_NO_ANCHOR,
 		/* 66 */ YY_NO_ANCHOR,
-		/* 67 */ YY_NO_ANCHOR,
-		/* 68 */ YY_NO_ANCHOR,
-		/* 69 */ YY_NO_ANCHOR,
-		/* 70 */ YY_NO_ANCHOR
+		/* 67 */ YY_NO_ANCHOR
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"42:8,7:3,42:2,0,42:18,7,42,28,42:2,26,25,42,34,35,12,10,27,11,40,41,31:10,2" +
-"3,24,8,9,8,42:2,32:26,36,42,37,29,42,30,2,32,3,32,6,22,5,32,17,32,4,20,18,1" +
-"6,19,1,32,13,21,14,15,33,32:4,38,42,39,42:2,43:2")[0];
+"42:8,7:3,42:2,29,42:18,7,42,28,42:2,26,25,42,34,35,12,10,27,11,40,41,33:10," +
+"23,24,8,9,8,42:2,32:26,36,42,37,42:2,30,2,32,3,32,6,22,5,32,17,32,4,20,18,1" +
+"6,19,1,32,13,21,14,15,31,32:4,38,42,39,42:2,0:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,71,
-"0,1,2:2,3,2:3,4,2,5,2:2,6,2:9,7,2:2,8,7:7,8,9,8,2,10,11,2,12,13,14,15,16,17" +
-",18,19,20,21,14,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,7")[0];
+	private int yy_rmap[] = unpackFromString(1,68,
+"0,1,2,1:2,3,1:3,4,1,5,1:2,6,1:8,7,1:3,7:7,8,9,8,10,11,10,12,1,13,14,15,16,1" +
+"7,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,7")[0];
 
-	private int yy_nxt[][] = unpackFromString(40,44,
-"-1,1,70,64,70:2,58,2,3,4,5,6,7,68,70:3,35,70:4,59,8,9,10,11,12,36,40,43,13," +
-"70,50,14,15,16,17,18,19,20,21,40,22,-1,70,69,70:4,-1:6,70:10,-1:8,39,70:2,-" +
-"1:63,3,-1:43,24,-1:59,25,-1:49,13,-1:13,70:6,-1:6,70:10,-1:8,39,70:2,-1:38," +
-"26,34,-1:10,34,-1:4,70:6,-1:6,70:5,66,70:3,23,-1:8,39,70:2,-1:11,38:6,-1:6," +
-"38:10,-1:7,37,41,38:2,-1:41,39,-1:42,37,41,-1:13,70:6,-1:6,27,70:9,-1:8,39," +
-"70:2,-1:11,38:6,-1:6,38:10,-1:7,37,51,38:2,-1:11,70:5,28,-1:6,70:10,-1:8,39" +
-",70:2,-1:11,70:2,29,70:3,-1:6,70:10,-1:8,39,70:2,-1:11,70:6,-1:6,70,30,70:8" +
-",-1:8,39,70:2,-1:11,70:6,-1:6,70:3,31,70:6,-1:8,39,70:2,-1:11,70:6,-1:6,70," +
-"32,70:8,-1:8,39,70:2,-1:11,70:5,33,-1:6,70:10,-1:8,39,70:2,-1:11,70,42,70:4" +
-",-1:6,70:10,-1:8,39,70:2,-1:11,70:6,-1:6,70:8,44,70,-1:8,39,70:2,-1:11,70:6" +
-",-1:6,70:3,45,70:6,-1:8,39,70:2,-1:11,70:6,-1:6,70:8,46,70,-1:8,39,70:2,-1:" +
-"11,70:6,-1:6,47,70:9,-1:8,39,70:2,-1:11,70:6,-1:6,48,70:9,-1:8,39,70:2,-1:1" +
-"1,70:4,49,70,-1:6,70:10,-1:8,39,70:2,-1:11,70:6,-1:6,70:7,52,70:2,-1:8,39,7" +
-"0:2,-1:11,70:6,-1:6,70:2,53,70:7,-1:8,39,70:2,-1:11,70:6,-1:6,70:3,54,70:6," +
-"-1:8,39,70:2,-1:11,70:6,-1:6,70:2,55,70:7,-1:8,39,70:2,-1:11,70:6,-1:6,70:6" +
-",56,70:3,-1:8,39,70:2,-1:11,70,57,70:4,-1:6,70:10,-1:8,39,70:2,-1:11,70:6,-" +
-"1:6,70:6,60,70:3,-1:8,39,70:2,-1:11,70:6,-1:6,70,61,70:8,-1:8,39,70:2,-1:11" +
-",62,70:5,-1:6,70:10,-1:8,39,70:2,-1:11,70:3,63,70:2,-1:6,70:10,-1:8,39,70:2" +
-",-1:11,70:5,65,-1:6,70:10,-1:8,39,70:2,-1:11,70:2,67,70:3,-1:6,70:10,-1:8,3" +
-"9,70:2,-1:10");
+	private int yy_nxt[][] = unpackFromString(38,43,
+"1,2,67,61,67:2,55,3,4,5,6,7,8,65,67:3,35,67:4,56,9,10,11,12,13,36,-1,39,48," +
+"67,14,15,16,17,18,19,20,21,22,41,-1:44,67,66,67:4,-1:6,67:10,-1:8,67:2,38,-" +
+"1:18,4,-1:42,24,-1:58,25,-1:50,14,-1:10,67:6,-1:6,67:10,-1:8,67:2,38,-1:10," +
+"34:27,26,34:14,-1,67:6,-1:6,67:5,63,67:3,23,-1:8,67:2,38,-1:10,37:29,26,37:" +
+"12,-1:33,38,-1:10,67:6,-1:6,27,67:9,-1:8,67:2,38,-1:10,67:5,28,-1:6,67:10,-" +
+"1:8,67:2,38,-1:10,67:2,29,67:3,-1:6,67:10,-1:8,67:2,38,-1:10,67:6,-1:6,67,3" +
+"0,67:8,-1:8,67:2,38,-1:10,67:6,-1:6,67:3,31,67:6,-1:8,67:2,38,-1:10,67:6,-1" +
+":6,67,32,67:8,-1:8,67:2,38,-1:10,67:5,33,-1:6,67:10,-1:8,67:2,38,-1:10,67,4" +
+"0,67:4,-1:6,67:10,-1:8,67:2,38,-1:10,67:6,-1:6,67:8,42,67,-1:8,67:2,38,-1:1" +
+"0,67:6,-1:6,67:3,43,67:6,-1:8,67:2,38,-1:10,67:6,-1:6,67:8,44,67,-1:8,67:2," +
+"38,-1:10,67:6,-1:6,45,67:9,-1:8,67:2,38,-1:10,67:6,-1:6,46,67:9,-1:8,67:2,3" +
+"8,-1:10,67:4,47,67,-1:6,67:10,-1:8,67:2,38,-1:10,67:6,-1:6,67:7,49,67:2,-1:" +
+"8,67:2,38,-1:10,67:6,-1:6,67:2,50,67:7,-1:8,67:2,38,-1:10,67:6,-1:6,67:3,51" +
+",67:6,-1:8,67:2,38,-1:10,67:6,-1:6,67:2,52,67:7,-1:8,67:2,38,-1:10,67:6,-1:" +
+"6,67:6,53,67:3,-1:8,67:2,38,-1:10,67,54,67:4,-1:6,67:10,-1:8,67:2,38,-1:10," +
+"67:6,-1:6,67:6,57,67:3,-1:8,67:2,38,-1:10,67:6,-1:6,67,58,67:8,-1:8,67:2,38" +
+",-1:10,59,67:5,-1:6,67:10,-1:8,67:2,38,-1:10,67:3,60,67:2,-1:6,67:10,-1:8,6" +
+"7:2,38,-1:10,67:5,62,-1:6,67:10,-1:8,67:2,38,-1:10,67:2,64,67:3,-1:6,67:10," +
+"-1:8,67:2,38,-1:9");
 
 	public Token getToken ()
 		throws java.io.IOException {
@@ -386,93 +382,93 @@ class Yylex {
 					yy_to_mark();
 					switch (yy_last_accept_state) {
 					case 1:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
+						
 					case -2:
 						break;
 					case 2:
-						{}
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -3:
 						break;
 					case 3:
-						{ return (new Token(Token.REL_OP,yytext()));}
+						{}
 					case -4:
 						break;
 					case 4:
-						{ return (new Token(Token.EQUAL,yytext()));}
+						{ return (new Token(Token.REL_OP,yytext()));}
 					case -5:
 						break;
 					case 5:
-						{ return (new Token(Token.PLUS,yytext()));}
+						{ return (new Token(Token.EQUAL,yytext()));}
 					case -6:
 						break;
 					case 6:
-						{ return (new Token(Token.MINUS,yytext()));}
+						{ return (new Token(Token.PLUS,yytext()));}
 					case -7:
 						break;
 					case 7:
-						{ return (new Token(Token.ASTRISK,yytext()));}
+						{ return (new Token(Token.MINUS,yytext()));}
 					case -8:
 						break;
 					case 8:
-						{ return (new Token(Token.COLON,yytext()));}
+						{ return (new Token(Token.ASTRISK,yytext()));}
 					case -9:
 						break;
 					case 9:
-						{ return (new Token(Token.SEMI_COLON,yytext()));}
+						{ return (new Token(Token.COLON,yytext()));}
 					case -10:
 						break;
 					case 10:
-						{
-  return new Token(Token.ERROR, "Invalid input: " + yytext());
-}
+						{ return (new Token(Token.SEMI_COLON,yytext()));}
 					case -11:
 						break;
 					case 11:
-						{ return (new Token(Token.PERCENT,yytext()));}
+						{
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
 					case -12:
 						break;
 					case 12:
-						{ return (new Token(Token.COMMA,yytext()));}
+						{ return (new Token(Token.PERCENT,yytext()));}
 					case -13:
 						break;
 					case 13:
-						{ return (new Token(Token.INT_LIT,yytext()));}
+						{ return (new Token(Token.COMMA,yytext()));}
 					case -14:
 						break;
 					case 14:
-						{ return (new Token(Token.OPEN_PARAN,yytext()));}
+						{ return (new Token(Token.INT_LIT,yytext()));}
 					case -15:
 						break;
 					case 15:
-						{ return (new Token(Token.CLOSE_PARAN,yytext()));}
+						{ return (new Token(Token.OPEN_PARAN,yytext()));}
 					case -16:
 						break;
 					case 16:
-						{ return (new Token(Token.OPEN_SQUARE,yytext()));}
+						{ return (new Token(Token.CLOSE_PARAN,yytext()));}
 					case -17:
 						break;
 					case 17:
-						{ return (new Token(Token.CLOSE_SQUARE,yytext()));}
+						{ return (new Token(Token.OPEN_SQUARE,yytext()));}
 					case -18:
 						break;
 					case 18:
-						{ return (new Token(Token.OPEN_CURLY,yytext()));}
+						{ return (new Token(Token.CLOSE_SQUARE,yytext()));}
 					case -19:
 						break;
 					case 19:
-						{ return (new Token(Token.CLOSE_CURLY,yytext()));}
+						{ return (new Token(Token.OPEN_CURLY,yytext()));}
 					case -20:
 						break;
 					case 20:
-						{ return (new Token(Token.DOT,yytext()));}
+						{ return (new Token(Token.CLOSE_CURLY,yytext()));}
 					case -21:
 						break;
 					case 21:
-						{ return (new Token(Token.SLASH,yytext()));}
+						{ return (new Token(Token.DOT,yytext()));}
 					case -22:
 						break;
 					case 22:
-						
+						{ return (new Token(Token.SLASH,yytext()));}
 					case -23:
 						break;
 					case 23:
@@ -529,133 +525,129 @@ class Yylex {
 }
 					case -36:
 						break;
-					case 37:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
+					case 38:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -37:
 						break;
 					case 39:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
+						{
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
 					case -38:
 						break;
 					case 40:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
+					case -39:
+						break;
+					case 41:
 						{
   return new Token(Token.ERROR, "Invalid input: " + yytext());
 }
-					case -39:
+					case -40:
 						break;
 					case 42:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -40:
-						break;
-					case 43:
-						{
-  return new Token(Token.ERROR, "Invalid input: " + yytext());
-}
 					case -41:
 						break;
-					case 44:
+					case 43:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -42:
 						break;
-					case 45:
+					case 44:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -43:
 						break;
-					case 46:
+					case 45:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -44:
 						break;
-					case 47:
+					case 46:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -45:
 						break;
-					case 48:
+					case 47:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -46:
 						break;
-					case 49:
+					case 48:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -47:
 						break;
-					case 50:
+					case 49:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -48:
 						break;
-					case 52:
+					case 50:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -49:
 						break;
-					case 53:
+					case 51:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -50:
 						break;
-					case 54:
+					case 52:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -51:
 						break;
-					case 55:
+					case 53:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -52:
 						break;
-					case 56:
+					case 54:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -53:
 						break;
-					case 57:
+					case 55:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -54:
 						break;
-					case 58:
+					case 56:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -55:
 						break;
-					case 59:
+					case 57:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -56:
 						break;
-					case 60:
+					case 58:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -57:
 						break;
-					case 61:
+					case 59:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -58:
 						break;
-					case 62:
+					case 60:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -59:
 						break;
-					case 63:
+					case 61:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -60:
 						break;
-					case 64:
+					case 62:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -61:
 						break;
-					case 65:
+					case 63:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -62:
 						break;
-					case 66:
+					case 64:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -63:
 						break;
-					case 67:
+					case 65:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -64:
 						break;
-					case 68:
+					case 66:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -65:
 						break;
-					case 69:
+					case 67:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -66:
-						break;
-					case 70:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -67:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);
