@@ -58,7 +58,7 @@ STRING_LIT = (\"[A-Za-z]+\")
 CONST=const
 EQUAL=[\=]
 VAR=var
-IDENTIFIER=[A-Za-z]+
+IDENTIFIER=[A-Za-z]+[0-9]*
 OPEN_PARAN=\(
 CLOSE_PARAN=\)
 OPEN_CURLY=\{
