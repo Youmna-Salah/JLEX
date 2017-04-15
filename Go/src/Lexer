@@ -54,16 +54,33 @@ PACKAGE =package SPACE IDENTIFIER BREAKLINE
 SPACE =[\n\ \t\b\012]
 BREAKLINE =\n
 FUNC=func
-STRING_LIT = (\"[A-Za-z]+\")
 CONST=const
 EQUAL=[\=]
+PLUS =\+
+MINUS =\-
 VAR=var
+IF =if
+ASTRISK =\*
+COLON_EQUAL = \:=
+ELSE =else
+PERCENT =\%
+AND_OP =\&&
+REL_OP = \<|\>|\==
+RETURN =return
+COLON = \:
+SEMI_COLON = \;
+OPEN_PARAN=\( EXP CLOSE_PARAN
+CLOSE_PARAN =\) 
+OPEN_SQUARE =\[ 
+CLOSE_SQUARE =\] 
+EXP =?IDENTIFIER ?DOT ?COMMA ?INT_LIT ?SLASH ?STRING_LIT
 IDENTIFIER=[A-Za-z]+[0-9]*
-OPEN_PARAN=\(
-CLOSE_PARAN=\)
+STRING_LIT = ((\" ANY \")|(`[0-9]*[A-Za-z]*[0-9]*\`))
+ANY =[0-9]|[A-Za-z]|COLON|SEMI_COLON|DOT|INT_LIT|OPEN_SQUARE|OPEN_CURLY|OPEN_PARAN|CLOSE_CURLY|OPEN_PARAN|CLOSE_CURLY|CLOSE_SQUARE|CLOSE_PARAN|PLUS|MINUS|COMMA|SLASH
 OPEN_CURLY=\{
 CLOSE_CURLY=\}
 DOT=\.
+COMMA=\,
 INT_LIT=[0-9]+
 SLASH=/
 
@@ -77,8 +94,21 @@ SLASH=/
 <YYINITIAL> {PACKAGE} { return (new Token(Token.PACKAGE,yytext()));}
 <YYINITIAL> {SPACE} {}
 <YYINITIAL> {BREAKLINE} {}
+<YYINITIAL> {REL_OP} { return (new Token(Token.REL_OP,yytext()));}
+<YYINITIAL> {PLUS} { return (new Token(Token.PLUS,yytext()));}
+<YYINITIAL> {MINUS} { return (new Token(Token.MINUS,yytext()));}
+<YYINITIAL> {ASTRISK} { return (new Token(Token.ASTRISK,yytext()));}
+<YYINITIAL> {RETURN} { return (new Token(Token.RETURN,yytext()));}
 <YYINITIAL> {IMPORT} { return (new Token(Token.IMPORT,yytext()));}
+<YYINITIAL> {ELSE} { return (new Token(Token.ELSE,yytext()));}
+<YYINITIAL> {IF} { return (new Token(Token.IF,yytext()));}
+<YYINITIAL> {COLON} { return (new Token(Token.COLON,yytext()));}
+<YYINITIAL> {COLON_EQUAL} { return (new Token(Token.COLON_EQUAL,yytext()));}
+<YYINITIAL> {SEMI_COLON} { return (new Token(Token.SEMI_COLON,yytext()));}
+<YYINITIAL> {AND_OP} { return (new Token(Token.AND_OP,yytext()));}
+<YYINITIAL> {PERCENT} { return (new Token(Token.PERCENT,yytext()));}
 <YYINITIAL> {FUNC} { return (new Token(Token.FUNC,yytext()));}
+<YYINITIAL> {COMMA} { return (new Token(Token.COMMA,yytext()));}
 <YYINITIAL> {STRING_LIT} { return (new Token(Token.STRING_LIT,yytext()));}
 <YYINITIAL> {CONST} { return (new Token(Token.CONST,yytext()));}
 <YYINITIAL> {EQUAL} { return (new Token(Token.EQUAL,yytext()));}
@@ -86,6 +116,8 @@ SLASH=/
 <YYINITIAL> {IDENTIFIER} { return (new Token(Token.IDENTIFIER,yytext()));}
 <YYINITIAL> {OPEN_PARAN} { return (new Token(Token.OPEN_PARAN,yytext()));}
 <YYINITIAL> {CLOSE_PARAN} { return (new Token(Token.CLOSE_PARAN,yytext()));}
+<YYINITIAL> {OPEN_SQUARE} { return (new Token(Token.OPEN_SQUARE,yytext()));}
+<YYINITIAL> {CLOSE_SQUARE} { return (new Token(Token.CLOSE_SQUARE,yytext()));}
 <YYINITIAL> {OPEN_CURLY} { return (new Token(Token.OPEN_CURLY,yytext()));}
 <YYINITIAL> {CLOSE_CURLY} { return (new Token(Token.CLOSE_CURLY,yytext()));}
 <YYINITIAL> {DOT} { return (new Token(Token.DOT,yytext()));}
