@@ -57,10 +57,19 @@ FUNC=func
 STRING_LIT = (\"[A-Za-z]+\")
 CONST=const
 EQUAL=[\=]
+VAR=var
 IDENTIFIER=[A-Za-z]+
+OPEN_PARAN=\(
+CLOSE_PARAN=\)
+OPEN_CURLY=\{
+CLOSE_CURLY=\}
+DOT=\.
+INT_LIT=[0-9]+
+SLASH=/
 
 %eofval{
 //Add code to be executed when the end of the file is reached
+{return (new Token(Token.EOF,"Done"));}
 %eofval}
 
 
@@ -73,9 +82,15 @@ IDENTIFIER=[A-Za-z]+
 <YYINITIAL> {STRING_LIT} { return (new Token(Token.STRING_LIT,yytext()));}
 <YYINITIAL> {CONST} { return (new Token(Token.CONST,yytext()));}
 <YYINITIAL> {EQUAL} { return (new Token(Token.EQUAL,yytext()));}
-
+<YYINITIAL> {VAR} { return (new Token(Token.VAR,yytext()));}
 <YYINITIAL> {IDENTIFIER} { return (new Token(Token.IDENTIFIER,yytext()));}
-
+<YYINITIAL> {OPEN_PARAN} { return (new Token(Token.OPEN_PARAN,yytext()));}
+<YYINITIAL> {CLOSE_PARAN} { return (new Token(Token.CLOSE_PARAN,yytext()));}
+<YYINITIAL> {OPEN_CURLY} { return (new Token(Token.OPEN_CURLY,yytext()));}
+<YYINITIAL> {CLOSE_CURLY} { return (new Token(Token.CLOSE_CURLY,yytext()));}
+<YYINITIAL> {DOT} { return (new Token(Token.DOT,yytext()));}
+<YYINITIAL> {INT_LIT} { return (new Token(Token.INT_LIT,yytext()));}
+<YYINITIAL> {SLASH} { return (new Token(Token.SLASH,yytext()));}
 <YYINITIAL> . {
   return new Token(Token.ERROR, "Invalid input: " + yytext());
 }
