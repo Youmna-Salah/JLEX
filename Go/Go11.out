@@ -1,7 +1,9 @@
 PACKAGE : package
 IDENTIFIER : main
 IMPORT : import
-STRING_LIT : "fmt"
+ERROR: Invalid input: "
+IDENTIFIER : fmt
+ERROR: Invalid input: "
 FUNC : func
 IDENTIFIER : main
 OPEN_PARAN : (
@@ -137,8 +139,13 @@ ERROR: Invalid input: "
 COMMA : ,
 ERROR: Invalid input: "
 IDENTIFIER : i
-STRING_LIT : "}
-    fmt.Println("
+ERROR: Invalid input: "
+CLOSE_CURLY : }
+IDENTIFIER : fmt
+DOT : .
+IDENTIFIER : Println
+OPEN_PARAN : (
+ERROR: Invalid input: "
 IDENTIFIER : dcl
 COLON : :
 ERROR: Invalid input: "
