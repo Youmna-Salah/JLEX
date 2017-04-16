@@ -11,7 +11,7 @@ func main() {
     s[1] = "b"
     s[2] = "c"
 
-	s.append(s, "e", "f")
+	s.append(s, "e","f")
 
     l := s[2:5]
     fmt.Println("sl1:", l)
