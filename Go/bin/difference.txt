@@ -1,0 +1,22 @@
+52,54c52
+< STRING_LIT : "e"
+< COMMA : ,
+< STRING_LIT : "f"
+---
+> STRING_LIT : "e","f"
+108,112c106
+< STRING_LIT : "g"
+< COMMA : ,
+< STRING_LIT : "h"
+< COMMA : ,
+< STRING_LIT : "i"
+---
+> STRING_LIT : "g", "h", "i"
+134c128
+< FOR : for
+---
+> IDENTIFIER : for
+164c158
+< FOR : for
+---
+> IDENTIFIER : for

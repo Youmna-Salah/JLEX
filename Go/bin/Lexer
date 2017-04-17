@@ -1,9 +1,11 @@
 import java.lang.System;
 import java.io.*;
+import java.util.Stack;
 
 class Lexer {
 
 	Yylex tokenizer;
+	boolean end = false;
 	public  Lexer(String fileName) 
 	{
 	  try
@@ -20,7 +22,13 @@ class Lexer {
 		Token next=null;
 		try
 		{
-		 next=  tokenizer.getToken();
+			//if(!end) {
+				 next=  tokenizer.getToken();
+				 if(next.getTokenType() == 48) {
+			 		end = true;
+			 	}		
+			//}
+		 
 		}
 		catch(Exception e)
 		{
@@ -43,13 +51,16 @@ class Lexer {
 private int Quote_count = 0;
 private static String Quoted ="";
 	//initialize  variables to be used by class
+	private Stack<Character> stack_char = new Stack<Character>();
+	boolean paran = false;
+	boolean square = false;
+	boolean curly = false;
 %}
 
 
 %init{
 
 //Add code to be executed on initialization of the lexer
-
 %init}
 IMPORT =import SPACE STRING_LIT BREAKLINE
 PACKAGE =package SPACE IDENTIFIER BREAKLINE
@@ -79,7 +90,9 @@ OPEN_SQUARE =\[
 CLOSE_SQUARE =\] 
 EXP =([IDENTIFIER|DOT|COMMA|INT_LIT|SLASH|STRING_LIT]*)
 IDENTIFIER=[A-Za-z]+[0-9]*
-STRING_TEXT=(\\\"|\\\`|[^\"\,\"\n\"\`]|\\{SPACE}+\\)*
+ANY =[0-9]|[A-Za-z]|COLON|SEMI_COLON|DOT|INT_LIT|OPEN_SQUARE|OPEN_CURLY|OPEN_PARAN|CLOSE_CURLY|OPEN_PARAN|CLOSE_CURLY|CLOSE_SQUARE|CLOSE_PARAN|PLUS|MINUS|COMMA|SLASH
+
+STRING_TEXT=(\\\"|\\\`|[^\n\"\`]|\\{SPACE}+\\)+
 STRING =(\\\"|\\\`|[^\n\"\`]|\\{SPACE}+\\)*
 OPEN_CURLY=\{
 CLOSE_CURLY=\}
@@ -95,7 +108,18 @@ FOR =for
 STRUCT =struct
 %eofval{
 //Add code to be executed when the end of the file is reached
-{return (new Token(Token.EOF,"Done"));}
+	{
+		if(paran) {
+			return (new Token(Token.EOF, "There is some ( that is not closed"));
+		}
+		if(square) {
+			return (new Token(Token.EOF, "There is some [ that is not closed"));
+		}
+		if(curly) {
+			return (new Token(Token.EOF, "There is some {} that is not closed"));
+		}
+		return (new Token(Token.EOF,"Done"));
+	}
 %eofval}
 
 
@@ -130,7 +154,7 @@ STRUCT =struct
 <YYINITIAL> {INCREMENT} { return (new Token(Token.INCREMENT,yytext()));}
 
 
-<YYINITIAL> \"({STRING_TEXT}|{STRING})(\"({STRING_TEXT})\")*({STRING_TEXT}|{STRING})*\" {
+<YYINITIAL> \"({STRING_TEXT})\" {
 	String str =  yytext().substring(1,yytext().length() - 1);
 	
 	if(str.length() == yytext().length() - 2)
@@ -146,7 +170,7 @@ return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline
 }
 
 
-<YYINITIAL> \`{STRING_TEXT}(\`{STRING_TEXT}\`)*({STRING_TEXT})*\` {
+<YYINITIAL> \`{STRING_TEXT}\` {
 	String str =  yytext().substring(1,yytext().length() - 1);
 	
 	if(str.length() == yytext().length() - 2)
@@ -164,13 +188,54 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 
 <YYINITIAL> {EQUAL} { return (new Token(Token.EQUAL,yytext()));}
 <YYINITIAL> {VAR} { return (new Token(Token.VAR,yytext()));}
+<YYINITIAL> {IDENTIFIER} { return (new Token(Token.IDENTIFIER,yytext()));}
+<YYINITIAL> {OPEN_PARAN} { stack_char.push('('); return (new Token(Token.OPEN_PARAN,yytext()));}
+<YYINITIAL> {OPEN_SQUARE} { stack_char.push('[');return (new Token(Token.OPEN_SQUARE,yytext()));}
+<YYINITIAL> {OPEN_CURLY} { stack_char.push('{');return (new Token(Token.OPEN_CURLY,yytext()));}
+<YYINITIAL> {CLOSE_PARAN} { 
+		Character temp = stack_char.pop();
+		if(temp == '(') {
+			return (new Token(Token.CLOSE_PARAN,yytext()));
+		} else {
+			if(temp =='[') {
+				square = true;
+			}
+			if(temp == '{') {
+				curly = true;
+			}
+			return (new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
+		}
+	}
+<YYINITIAL> {CLOSE_SQUARE} { 
+		Character temp = stack_char.pop();
+			if(temp == '[') {
+				return (new Token(Token.CLOSE_SQUARE,yytext()));
+			} else {
+				if(temp == '(') {
+					paran = true;
+				}
+				if(temp == '{') {
+					curly = true;
+				}
+				return ( new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
+			}
 
-<YYINITIAL> {OPEN_PARAN} { return (new Token(Token.OPEN_PARAN,yytext()));}
-<YYINITIAL> {CLOSE_PARAN} { return (new Token(Token.CLOSE_PARAN,yytext()));}
-<YYINITIAL> {OPEN_SQUARE} { return (new Token(Token.OPEN_SQUARE,yytext()));}
-<YYINITIAL> {CLOSE_SQUARE} { return (new Token(Token.CLOSE_SQUARE,yytext()));}
-<YYINITIAL> {OPEN_CURLY} { return (new Token(Token.OPEN_CURLY,yytext()));}
-<YYINITIAL> {CLOSE_CURLY} { return (new Token(Token.CLOSE_CURLY,yytext()));}
+		}
+<YYINITIAL> {CLOSE_CURLY} { 
+		Character temp = stack_char.pop();
+		if(temp == '{') {
+			return (new Token(Token.CLOSE_CURLY,yytext()));
+		} else {
+			if(temp =='[') {
+				square = true;
+			}
+			if(temp == '(') {
+				paran = true;
+			}
+			return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
+		}
+	}
+
 <YYINITIAL> {DOT} { return (new Token(Token.DOT,yytext()));}
 <YYINITIAL> {INT_LIT} { return (new Token(Token.INT_LIT,yytext()));}
 <YYINITIAL> {SLASH} { return (new Token(Token.SLASH,yytext()));}
