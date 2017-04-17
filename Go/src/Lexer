@@ -62,7 +62,6 @@ private static String Quoted ="";
 
 //Add code to be executed on initialization of the lexer
 %init}
-STRING_LIT =\"(.)+\"|\`[0-9]*[A-Za-z]*[0-9]*\`
 IMPORT =import SPACE STRING_LIT BREAKLINE
 PACKAGE =package SPACE IDENTIFIER BREAKLINE
 BREAKLINE =\n
@@ -92,7 +91,8 @@ CLOSE_SQUARE =\]
 EXP =([IDENTIFIER|DOT|COMMA|INT_LIT|SLASH|STRING_LIT]*)
 IDENTIFIER=[A-Za-z]+[0-9]*
 ANY =[0-9]|[A-Za-z]|COLON|SEMI_COLON|DOT|INT_LIT|OPEN_SQUARE|OPEN_CURLY|OPEN_PARAN|CLOSE_CURLY|OPEN_PARAN|CLOSE_CURLY|CLOSE_SQUARE|CLOSE_PARAN|PLUS|MINUS|COMMA|SLASH
-STRING_TEXT=(\\\"|\\\`|[^\"\,\"\n\"\`]|\\{SPACE}+\\)*
+
+STRING_TEXT=(\\\"|\\\`|[^\n\"\`]|\\{SPACE}+\\)+
 STRING =(\\\"|\\\`|[^\n\"\`]|\\{SPACE}+\\)*
 OPEN_CURLY=\{
 CLOSE_CURLY=\}
@@ -124,7 +124,6 @@ STRUCT =struct
 
 
 %% 
-<YYINITIAL> {STRING_LIT} { return (new Token(Token.STRING_LIT,yytext()));}
 <YYINITIAL> {PACKAGE} { return (new Token(Token.PACKAGE,yytext()));}
 <YYINITIAL> {TYPE} { return (new Token(Token.TYPE,yytext()));}
 <YYINITIAL> {STRUCT} { return (new Token(Token.STRUCT,yytext()));}
@@ -155,7 +154,7 @@ STRUCT =struct
 <YYINITIAL> {INCREMENT} { return (new Token(Token.INCREMENT,yytext()));}
 
 
-<YYINITIAL> \"({STRING_TEXT}|{STRING})(\"({STRING_TEXT})\")*({STRING_TEXT}|{STRING})*\" {
+<YYINITIAL> \"({STRING_TEXT})\" {
 	String str =  yytext().substring(1,yytext().length() - 1);
 	
 	if(str.length() == yytext().length() - 2)
@@ -171,7 +170,7 @@ return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline
 }
 
 
-<YYINITIAL> \`{STRING_TEXT}(\`{STRING_TEXT}\`)*({STRING_TEXT})*\` {
+<YYINITIAL> \`{STRING_TEXT}\` {
 	String str =  yytext().substring(1,yytext().length() - 1);
 	
 	if(str.length() == yytext().length() - 2)

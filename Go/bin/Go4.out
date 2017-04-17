@@ -52,7 +52,7 @@ IDENTIFIER : swap
 OPEN_PARAN : (
 STRING_LIT : `he`
 IDENTIFIER : llo
-ERROR: Invalid input: ` in line: 16
+ERROR: Invalid input: ` in line 16
 COMMA : ,
 STRING_LIT : "world		"
 CLOSE_PARAN : )
