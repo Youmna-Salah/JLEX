@@ -150,7 +150,7 @@ SLASH=/
 			if(temp == '{') {
 				curly = true;
 			}
-			return (new Token(Token.ERROR, "You have a missing bracket"));
+			return (new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
 		}
 	}
 <YYINITIAL> {CLOSE_SQUARE} { 
@@ -164,7 +164,7 @@ SLASH=/
 				if(temp == '{') {
 					curly = true;
 				}
-				return ( new Token(Token.ERROR, "You have a missing bracket"));
+				return ( new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
 			}
 
 		}
