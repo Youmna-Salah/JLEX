@@ -55,9 +55,6 @@ private static String Quoted ="";
 	boolean paran = false;
 	boolean square = false;
 	boolean curly = false;
-	boolean close_paran = false;
-	boolean close_square = false;
-	boolean close_curly = false;
 %}
 
 
@@ -185,7 +182,7 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 <YYINITIAL> \` {
 	String str =  yytext().substring(1,yytext().length());
 
-return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline));
+return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line "+yyline));
 }
 <YYINITIAL> {CONST} { return (new Token(Token.CONST,yytext()));}
 <YYINITIAL> {FOR} { return (new Token(Token.FOR,yytext()));}
@@ -203,7 +200,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 		} else {
 			Stack<Character> temp_stack = new Stack<Character>();
 			temp_stack.push(temp);
-			close_paran = true;
+			boolean close_paran = true;
 			while(!stack_char.isEmpty()) {
 				temp = stack_char.pop();
 				temp_stack.push(temp);
@@ -217,22 +214,14 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			if(close_paran) {
 				return (new Token(Token.ERROR, ") has no matching ( in line " + (yyline+1)));
 			} else {
+				if(temp == '{') {
+					curly = true;
+				}
+				if(temp == '[') {
+					square = true;
+				}
 				return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
-			}
-			//if(temp =='[') {
-			//	square = true;
-		
-			// }
-			// else {
-			// 	if(temp == '{') {
-			// 		curly = true;
-			// 		return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
-				
-			// 	} else {
-			// 		close_paran = true;
-					
-			// 	}
-			// }		
+			}		
 		}
 	}
 <YYINITIAL> {CLOSE_SQUARE} { 
@@ -242,7 +231,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			} else {
 				Stack<Character> temp_stack = new Stack<Character>();
 				temp_stack.push(temp);
-				close_square = true;
+				boolean close_square = true;
 				while(!stack_char.isEmpty()) {
 					temp = stack_char.pop();
 					temp_stack.push(temp);
@@ -256,20 +245,14 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 				if(close_square) {
 					return (new Token(Token.ERROR, "] has no matching [ in line " + (yyline+1)));
 				} else {
+					if(temp == '(') {
+						paran = true;
+					}
+					if(temp == '{') {
+						curly = true;
+					}					
 					return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
-				}
-				// if(temp == '(') {
-				// 	paran = true;
-				// 	return ( new Token(Token.ERROR, "You have a missing bracket in line "  + (yyline+1)));
-				// } else {
-				// 	if(temp == '{') {
-				// 		curly = true;
-				// 		return ( new Token(Token.ERROR, "You have a missing bracket in line "  + (yyline+1)));
-				// 	} else {
-				// 		return (new Token(Token.ERROR, "] has no matching [ in line " + (yyline+1)));
-				// 	}
-				// }
-				
+				} 
 			}
 
 		}
@@ -280,11 +263,11 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 		} else {
 			Stack<Character> temp_stack = new Stack<Character>();
 			temp_stack.push(temp);
-			close_curly = true;
+			boolean close_curly = true;
 			while(!stack_char.isEmpty()) {
 				temp = stack_char.pop();
 				temp_stack.push(temp);
-				if(temp == '[') {
+				if(temp == '{') {
 					close_curly = false;
 				}
 			}
@@ -294,20 +277,15 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			if(close_curly) {
 				return (new Token(Token.ERROR, "} has no matching { in line " + (yyline+1)));
 			} else {
+				temp = stack_char.peek();
+				if(temp == '(') {
+					paran = true;
+				}
+				if(temp == '[') {
+					square = true;
+				}
 				return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
 			}
-			// if(temp =='[') {
-			// 	square = true;
-			// 	return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
-			// } else {
-			// 	if(temp == '(') {
-			// 		paran = true;
-			// 		return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
-			// 	} else{
-			// 		return (new Token(Token.ERROR, "} has no matching { in line " + (yyline+1)));
-			// 	}
-			// }
-			
 		}
 	}
 
@@ -317,5 +295,5 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 
 <YYINITIAL> {IDENTIFIER} { return (new Token(Token.IDENTIFIER,yytext()));}
 <YYINITIAL> . {
-  return new Token(Token.ERROR, "Invalid input: " + yytext());
+  return new Token(Token.ERROR, "Invalid input " + yytext());
 }

@@ -52,9 +52,6 @@ private static String Quoted ="";
 	boolean paran = false;
 	boolean square = false;
 	boolean curly = false;
-	boolean close_paran = false;
-	boolean close_square = false;
-	boolean close_curly = false;
 	private java.io.BufferedReader yy_reader;
 	private int yy_buffer_index;
 	private int yy_buffer_read;
@@ -296,165 +293,30 @@ private static String Quoted ="";
 		/* 41 */ YY_NO_ANCHOR,
 		/* 42 */ YY_NO_ANCHOR,
 		/* 43 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
 		/* 44 */ YY_NO_ANCHOR,
-		/* 45 */ YY_NO_ANCHOR,
-		/* 46 */ YY_NOT_ACCEPT,
-=======
-		/* 44 */ YY_NOT_ACCEPT,
-		/* 45 */ YY_NO_ANCHOR,
+		/* 45 */ YY_NOT_ACCEPT,
 		/* 46 */ YY_NO_ANCHOR,
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 		/* 47 */ YY_NO_ANCHOR,
 		/* 48 */ YY_NO_ANCHOR,
 		/* 49 */ YY_NO_ANCHOR,
-		/* 50 */ YY_NOT_ACCEPT,
-		/* 51 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
+		/* 50 */ YY_NO_ANCHOR,
+		/* 51 */ YY_NOT_ACCEPT,
 		/* 52 */ YY_NO_ANCHOR,
 		/* 53 */ YY_NOT_ACCEPT,
 		/* 54 */ YY_NO_ANCHOR,
-		/* 55 */ YY_NO_ANCHOR,
+		/* 55 */ YY_NOT_ACCEPT,
 		/* 56 */ YY_NO_ANCHOR,
-=======
-		/* 52 */ YY_NOT_ACCEPT,
-		/* 53 */ YY_NO_ANCHOR,
-		/* 54 */ YY_NOT_ACCEPT,
-		/* 55 */ YY_NO_ANCHOR,
-		/* 56 */ YY_NOT_ACCEPT,
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
-		/* 57 */ YY_NO_ANCHOR,
-		/* 58 */ YY_NOT_ACCEPT,
-		/* 59 */ YY_NO_ANCHOR,
-		/* 60 */ YY_NOT_ACCEPT,
-		/* 61 */ YY_NO_ANCHOR,
+		/* 57 */ YY_NOT_ACCEPT,
+		/* 58 */ YY_NO_ANCHOR,
+		/* 59 */ YY_NOT_ACCEPT,
+		/* 60 */ YY_NO_ANCHOR,
+		/* 61 */ YY_NOT_ACCEPT,
 		/* 62 */ YY_NO_ANCHOR,
 		/* 63 */ YY_NOT_ACCEPT,
 		/* 64 */ YY_NO_ANCHOR,
 		/* 65 */ YY_NO_ANCHOR,
 		/* 66 */ YY_NO_ANCHOR,
 		/* 67 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
-		/* 68 */ YY_NOT_ACCEPT,
-		/* 69 */ YY_NO_ANCHOR,
-		/* 70 */ YY_NO_ANCHOR,
-		/* 71 */ YY_NOT_ACCEPT,
-		/* 72 */ YY_NO_ANCHOR,
-		/* 73 */ YY_NOT_ACCEPT,
-		/* 74 */ YY_NO_ANCHOR,
-		/* 75 */ YY_NOT_ACCEPT,
-		/* 76 */ YY_NO_ANCHOR,
-		/* 77 */ YY_NOT_ACCEPT,
-		/* 78 */ YY_NO_ANCHOR,
-		/* 79 */ YY_NOT_ACCEPT,
-		/* 80 */ YY_NO_ANCHOR,
-		/* 81 */ YY_NOT_ACCEPT,
-		/* 82 */ YY_NO_ANCHOR,
-		/* 83 */ YY_NOT_ACCEPT,
-		/* 84 */ YY_NO_ANCHOR,
-		/* 85 */ YY_NOT_ACCEPT,
-		/* 86 */ YY_NO_ANCHOR,
-		/* 87 */ YY_NOT_ACCEPT,
-		/* 88 */ YY_NO_ANCHOR,
-		/* 89 */ YY_NOT_ACCEPT,
-		/* 90 */ YY_NO_ANCHOR,
-		/* 91 */ YY_NOT_ACCEPT,
-		/* 92 */ YY_NOT_ACCEPT,
-		/* 93 */ YY_NOT_ACCEPT,
-		/* 94 */ YY_NOT_ACCEPT,
-		/* 95 */ YY_NOT_ACCEPT,
-		/* 96 */ YY_NOT_ACCEPT,
-		/* 97 */ YY_NOT_ACCEPT,
-		/* 98 */ YY_NOT_ACCEPT,
-		/* 99 */ YY_NOT_ACCEPT,
-		/* 100 */ YY_NOT_ACCEPT,
-		/* 101 */ YY_NOT_ACCEPT,
-		/* 102 */ YY_NOT_ACCEPT,
-		/* 103 */ YY_NOT_ACCEPT,
-		/* 104 */ YY_NOT_ACCEPT,
-		/* 105 */ YY_NOT_ACCEPT,
-		/* 106 */ YY_NOT_ACCEPT,
-		/* 107 */ YY_NOT_ACCEPT,
-		/* 108 */ YY_NOT_ACCEPT,
-		/* 109 */ YY_NOT_ACCEPT,
-		/* 110 */ YY_NOT_ACCEPT,
-		/* 111 */ YY_NOT_ACCEPT,
-		/* 112 */ YY_NOT_ACCEPT,
-		/* 113 */ YY_NOT_ACCEPT,
-		/* 114 */ YY_NOT_ACCEPT,
-		/* 115 */ YY_NOT_ACCEPT,
-		/* 116 */ YY_NOT_ACCEPT,
-		/* 117 */ YY_NOT_ACCEPT,
-		/* 118 */ YY_NOT_ACCEPT,
-		/* 119 */ YY_NOT_ACCEPT,
-		/* 120 */ YY_NOT_ACCEPT,
-		/* 121 */ YY_NOT_ACCEPT,
-		/* 122 */ YY_NOT_ACCEPT,
-		/* 123 */ YY_NOT_ACCEPT,
-		/* 124 */ YY_NOT_ACCEPT,
-		/* 125 */ YY_NOT_ACCEPT,
-		/* 126 */ YY_NOT_ACCEPT,
-		/* 127 */ YY_NOT_ACCEPT,
-		/* 128 */ YY_NOT_ACCEPT,
-		/* 129 */ YY_NOT_ACCEPT,
-		/* 130 */ YY_NOT_ACCEPT,
-		/* 131 */ YY_NOT_ACCEPT,
-		/* 132 */ YY_NOT_ACCEPT,
-		/* 133 */ YY_NOT_ACCEPT,
-		/* 134 */ YY_NOT_ACCEPT,
-		/* 135 */ YY_NOT_ACCEPT,
-		/* 136 */ YY_NOT_ACCEPT,
-		/* 137 */ YY_NOT_ACCEPT,
-		/* 138 */ YY_NOT_ACCEPT,
-		/* 139 */ YY_NOT_ACCEPT,
-		/* 140 */ YY_NOT_ACCEPT,
-		/* 141 */ YY_NOT_ACCEPT,
-		/* 142 */ YY_NOT_ACCEPT,
-		/* 143 */ YY_NOT_ACCEPT,
-		/* 144 */ YY_NO_ANCHOR,
-		/* 145 */ YY_NOT_ACCEPT,
-		/* 146 */ YY_NO_ANCHOR,
-		/* 147 */ YY_NO_ANCHOR,
-		/* 148 */ YY_NO_ANCHOR,
-		/* 149 */ YY_NO_ANCHOR,
-		/* 150 */ YY_NOT_ACCEPT,
-		/* 151 */ YY_NOT_ACCEPT,
-		/* 152 */ YY_NO_ANCHOR,
-		/* 153 */ YY_NO_ANCHOR,
-		/* 154 */ YY_NO_ANCHOR,
-		/* 155 */ YY_NO_ANCHOR,
-		/* 156 */ YY_NO_ANCHOR,
-		/* 157 */ YY_NO_ANCHOR,
-		/* 158 */ YY_NO_ANCHOR,
-		/* 159 */ YY_NO_ANCHOR,
-		/* 160 */ YY_NO_ANCHOR,
-		/* 161 */ YY_NO_ANCHOR,
-		/* 162 */ YY_NO_ANCHOR,
-		/* 163 */ YY_NO_ANCHOR,
-		/* 164 */ YY_NO_ANCHOR,
-		/* 165 */ YY_NO_ANCHOR,
-		/* 166 */ YY_NO_ANCHOR,
-		/* 167 */ YY_NO_ANCHOR,
-		/* 168 */ YY_NO_ANCHOR,
-		/* 169 */ YY_NO_ANCHOR,
-		/* 170 */ YY_NO_ANCHOR,
-		/* 171 */ YY_NO_ANCHOR,
-		/* 172 */ YY_NO_ANCHOR,
-		/* 173 */ YY_NO_ANCHOR,
-		/* 174 */ YY_NO_ANCHOR,
-		/* 175 */ YY_NO_ANCHOR,
-		/* 176 */ YY_NO_ANCHOR,
-		/* 177 */ YY_NO_ANCHOR,
-		/* 178 */ YY_NO_ANCHOR,
-		/* 179 */ YY_NO_ANCHOR,
-		/* 180 */ YY_NO_ANCHOR,
-		/* 181 */ YY_NO_ANCHOR,
-		/* 182 */ YY_NO_ANCHOR,
-		/* 183 */ YY_NO_ANCHOR,
-		/* 184 */ YY_NO_ANCHOR,
-		/* 185 */ YY_NO_ANCHOR,
-		/* 186 */ YY_NO_ANCHOR
-=======
 		/* 68 */ YY_NO_ANCHOR,
 		/* 69 */ YY_NO_ANCHOR,
 		/* 70 */ YY_NO_ANCHOR,
@@ -494,148 +356,63 @@ private static String Quoted ="";
 		/* 104 */ YY_NO_ANCHOR,
 		/* 105 */ YY_NO_ANCHOR,
 		/* 106 */ YY_NO_ANCHOR
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
 "28:8,18:2,19,28:2,39,28:18,18,28,36,28:2,34,33,28,43,46,25,23,35,24,49,27,4" +
 "2:10,31,32,20,22,21,28:2,41:26,44,37,47,28:2,38,2,41,3,15,6,16,5,14,13,41,4" +
 ",17,29,26,30,1,41,10,9,7,11,40,12,41,8,41,45,28,48,28:2,0:2")[0];
 
-<<<<<<< HEAD
-	private int yy_rmap[] = unpackFromString(1,187,
-"0,1,2,1,3,4,5,1,6:2,7,1:2,8,9,1:10,10,11,5,7,12,1:2,11,5:13,13,14,15,1,16,1" +
-"7,18,19,20,21,19,1,22,23,1,24,25,26,27,28,29,30,31,32,33,3,34,35,36,10,37,3" +
-"8,39,16,40,41,42,43,44,45,46,47,48,49,50,11,30,51,52,53,54,29,55,28,56,57,3" +
-"3,58,59,24,60,21,61,25,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,7" +
-"9,80,81,82,83,18,84,85,86,87,88,89,90,91,92,93,94,95,41,10,63,73,75,96,18,9" +
-"7,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116" +
-",117,118,119,120,121,122,123,124,125,126,127,128,129,130,131")[0];
-
-	private int yy_nxt[][] = unpackFromString(132,50,
-"1,2,3,4,5,6,185,6,165,6:2,166,167,6,181,182,6:2,48,6,186,144,6,7:2,8,49,9,1" +
-"0,11,12,6,13,6:2,14,15,47,16,17,3,-1,152,18,19,20,21,22,23,24,-1:51,25,46,5" +
-"3,46:20,-1,46:14,145,58,63,46:8,-1:2,68,26,71,150:18,68,-1,68:6,150,68,150:" +
-"2,68:4,-1,73,68,150,68:7,-1:4,5,-1:49,54,6:18,-1:8,6,-1,6:2,-1:7,6,-1:34,49" +
-",-1:50,28,-1:53,29,-1:44,30,-1:23,51,75,53,75:20,-1,75:14,53,77,79,75:8,-1:" +
-"2,91,92,91:20,-1,91:14,-1,93,91:9,-1,29:23,-1,29:16,-1,29:8,-1,146,46,53,46" +
-":20,-1,46:14,145,58,63,46:8,-1:37,31,-1:16,54,6:16,27,6,-1:8,6,-1,178,6,-1:" +
-"7,6,-1:8,102,79,-1,79:20,-1,79:14,-1,103,79:9,-1,146,97,53,97:20,-1,97:15,9" +
-"8,99,97:8,-1:2,151,147,151:20,-1,151:14,-1,114,151:9,-1,56,53:22,-1,53:16,-" +
-"1,53:8,-1:4,54,-1:46,148,107,-1,107:20,-1,107:14,63,127,107:9,-1,61,46:21,8" +
-"5,87,46:14,145,58,63,46:8,-1:4,54,6:10,33,6:7,-1:8,6,-1,6:2,-1:7,6,-1:8,153" +
-",105,53,105:20,-1,105:14,145,106,107,105:8,-1:2,109,57,109:20,-1,109:14,-1," +
-"110,109:9,-1,50,63,-1,63:20,-1,63:15,89,63:9,-1:4,54,6:10,34,6:7,-1:8,6,-1," +
-"6:2,-1:7,6,-1:8,60,99,-1,99:20,-1,99:15,117,99:9,-1,56,97,53,97:20,-1,97:15" +
-",98,99,97:8,-1:2,109,32,109:20,-1,109:14,-1,110,109:9,-1:2,68,32,68:20,-1,6" +
-"8:14,-1,73,68:9,-1:4,54,6:6,35,6:11,-1:8,6,-1,6:2,-1:7,6,-1:8,50,99,-1,99:2" +
-"0,-1,99:15,117,99:9,-1:4,54,6:6,36,6:11,-1:8,6,-1,6:2,-1:7,6,-1:8,68:2,52,6" +
-"8:19,95,96,68:14,-1,73,68:9,-1:4,54,6:6,37,6:11,-1:8,6,-1,6:2,-1:7,6,-1:11," +
-"54,6:3,38,6:14,-1:8,6,-1,6:2,-1:7,6,-1:8,153,75:21,100,101,75:14,53,77,79,7" +
-"5:8,-1:4,54,6:7,39,6:10,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:7,40,6:10,-1:8,6,-1" +
-",6:2,-1:7,6,-1:8,146,81,53,81:20,-1,81:14,145,83,63,81:8,-1:4,54,6:14,41,6:" +
-"3,-1:8,6,-1,6:2,-1:7,6,-1:8,149,81:21,104,87,81:14,145,83,63,81:8,-1:4,54,6" +
-":18,-1:8,42,-1,6:2,-1:7,6,-1:8,146,46,53,46:19,85,87,46:14,145,58,63,46:8,-" +
-"1:4,54,6:7,43,6:10,-1:8,6,-1,6:2,-1:7,6,-1:30,87:2,-1:15,63,-1:13,54,6:6,44" +
-",6:11,-1:8,6,-1,6:2,-1:7,6,-1:8,55,63:21,108,87,63:15,89,63:9,-1:4,54,6:7,4" +
-"5,6:10,-1:8,6,-1,6:2,-1:7,6,-1:8,91:2,111,91:19,112,113,91:14,-1,93,91:9,-1" +
-":2,68,26,94,68:19,-1,68:14,-1,73,68:9,-1:2,68,32,68:19,95,96,68:14,-1,73,68" +
-":9,-1:23,96:2,-1:15,68,-1:10,66,97:21,115,116,97:15,98,99,97:8,-1,51,75,53," +
-"75:19,100,101,75:14,53,77,79,75:8,-1:23,101:2,-1:15,79,-1:10,121,79:21,122," +
-"101,79:14,-1,103,79:9,-1,146,81,53,81:19,104,87,81:14,145,83,63,81:8,-1,61," +
-"105:21,125,126,105:14,145,106,107,105:8,-1,50,63,-1,63:19,108,87,63:15,89,6" +
-"3:9,-1,109:2,62,109:19,128,129,109:14,-1,110,109:9,-1:2,130,147,130:20,-1,1" +
-"30:14,-1,131,130:9,-1:2,91,92,91:19,112,113,91:14,-1,93,91:9,-1:23,113:2,-1" +
-":15,91,-1:10,132,151,52,151:19,133,134,151:14,-1,114,151:9,-1,56,97,53,97:1" +
-"9,115,116,97:15,98,99,97:8,-1:23,116:2,-1:15,99,-1:10,65,99:21,135,116,99:1" +
-"5,117,99:9,-1,51,118,53,118:20,-1,118:14,97,119,120,118:8,-1,153,118:21,136" +
-",137,118:14,97,119,120,118:8,-1,70,120,-1,120:20,-1,120:14,99,138,120:9,-1," +
-"148,120,-1,120:20,-1,120:14,99,138,120:9,-1,102,79,-1,79:19,122,101,79:14,-" +
-"1,103,79:9,-1,153,123,53,123:20,-1,123:14,145,124,107,123:8,-1,149,123:21,1" +
-"39,126,123:14,145,124,107,123:8,-1,153,105,53,105:19,125,126,105:14,145,106" +
-",107,105:8,-1:23,126:2,-1:15,107,-1:10,55,107:21,140,126,107:14,63,127,107:" +
-"9,-1:2,109,57,109:19,128,129,109:14,-1,110,109:9,-1:23,129:2,-1:15,109,-1:1" +
-"1,130,67,130:20,-1,130:14,-1,131,130:9,-1,130:2,147,130:19,141,142,130:14,-" +
-"1,131,130:9,-1:2,151,147,151:19,133,134,151:14,-1,114,151:9,-1:23,134:2,-1:" +
-"15,132,-1:10,60,99,-1,99:19,135,116,99:15,117,99:9,-1,51,118,53,118:19,136," +
-"137,118:14,97,119,120,118:8,-1:23,137:2,-1:15,120,-1:10,148,120:21,143,137," +
-"120:14,99,138,120:9,-1,153,123,53,123:19,139,126,123:14,145,124,107,123:8,-" +
-"1,148,107,-1,107:19,140,126,107:14,63,127,107:9,-1:2,130,67,130:19,141,142," +
-"130:14,-1,131,130:9,-1:23,142:2,-1:15,130,-1:10,70,120,-1,120:19,143,137,12" +
-"0:14,99,138,120:9,-1:4,54,6:11,157,6:6,-1:8,6,-1,6,59,-1:7,6,-1:9,68,26,94," +
-"150:18,68,-1,68:6,150,68,150:2,68:4,-1,73,68,150,68:7,-1:4,54,6:2,64,6:15,-" +
-"1:8,6,-1,6:2,-1:7,6,-1:8,153,118,53,118:20,-1,118:14,97,119,120,118:8,-1:4," +
-"54,6:9,69,6:8,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:9,72,6:8,-1:8,6,-1,6:2,-1:7,6" +
-",-1:11,54,6,74,6:16,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:18,-1:8,76,-1,6:2,-1:7," +
-"6,-1:11,54,6:9,78,6:8,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:3,80,6:14,-1:8,6,-1,6" +
-":2,-1:7,6,-1:11,54,6:3,82,6:14,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:10,84,6:7,-1" +
-":8,6,-1,6:2,-1:7,6,-1:11,54,6:10,86,6:7,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:5,8" +
-"8,6:12,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:17,90,-1:8,6,-1,6:2,-1:7,6,-1:11,54," +
-"6:2,154,6:15,-1:8,6,-1,6,168,-1:7,6,-1:11,54,6:17,155,-1:8,6,-1,6:2,-1:7,6," +
-"-1:11,54,6:8,156,6:9,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:18,-1:8,158,-1,6:2,-1:" +
-"7,6,-1:11,54,6:11,159,6:6,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:7,160,6:10,-1:8,6" +
-",-1,6:2,-1:7,6,-1:11,54,6:11,161,6:6,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:18,-1:" +
-"8,6,-1,6,162,-1:7,6,-1:11,54,6:2,163,6:15,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:1" +
-"1,164,6:6,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:10,169,6:7,-1:8,6,-1,6:2,-1:7,6,-" +
-"1:11,54,6:13,170,6:4,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:7,171,6:10,-1:8,6,-1,6" +
-":2,-1:7,6,-1:11,54,6,172,6:16,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:4,173,6:13,-1" +
-":8,6,-1,6:2,-1:7,6,-1:11,54,6:2,174,6:15,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:7," +
-"175,6:4,176,6:5,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:6,177,6:11,-1:8,6,-1,6:2,-1" +
-":7,6,-1:11,54,6:3,179,6:14,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:16,180,6,-1:8,6," +
-"-1,6:2,-1:7,6,-1:11,54,6:2,183,6:15,-1:8,6,-1,6:2,-1:7,6,-1:11,54,6:6,184,6" +
-":11,-1:8,6,-1,6:2,-1:7,6,-1:7");
-=======
 	private int yy_rmap[] = unpackFromString(1,107,
-"0,1,2,1,3:2,4,1:2,5,1,6,1:3,7,8,9,1:7,10,4,11,1:4,10:12,12,13,1,14,12,15,16" +
-",17,15,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40" +
-",41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65" +
-",66,67,68,10:2,69")[0];
+"0,1,2,1,3:2,4,1:2,5,1,6,1:3,7,8,9,1:7,10,4,11,1:2,10,1:2,10:12,12,13,1,14,1" +
+"2,15,16,17,15,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,3" +
+"8,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,6" +
+"3,64,65,66,67,68,10,69")[0];
 
 	private int yy_nxt[][] = unpackFromString(70,50,
-"1,2,105,82,105:2,83,84,105,99,100,105:2,45,105,106,85,105,3:2,4,46,5,6,7,8," +
-"105,9,10,105:2,11,12,47,13,14,15,10,16,-1,70,105,17,18,19,20,21,22,23,24,-1" +
-":51,105,101,105:15,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:29,46,-1:50,26,-1:5" +
-"3,27,-1:44,28,-1:28,44:18,-1,44:16,-1,50,-1,44:11,-1,52:18,-1,52:16,-1,54,-" +
-"1,52:11,-1:42,17,-1:8,105:17,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,27:18,-" +
-"1,27:19,-1,27:10,-1,44:18,-1,44:16,30,50,-1,44:11,-1,105:15,25,105,-1:8,105" +
-",-1:2,96,105,-1:9,105:2,51,-1:40,29,-1:17,52:18,-1,52:16,-1,54,31,52:11,-1," +
-"44:17,56,58,44:16,48,50,44:12,-1:42,51,-1:8,105:9,32,105:7,-1:8,105,-1:2,10" +
-"5:2,-1:9,105:2,51,-1:8,52:17,60,62,52:17,54,49,52:11,-1,105:5,33,105:11,-1:" +
-"8,105,-1:2,105:2,-1:9,105:2,51,-1:8,44:17,56,58,44:16,30,50,-1,44:11,-1,105" +
-":5,34,105:11,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:25,58:2,-1:17,44,-1:13,10" +
-"5:5,35,105:11,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,52:17,60,62,52:16,-1,5" +
-"4,31,52:11,-1,105:2,36,105:14,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:25,62:2," +
-"-1:17,52,-1:13,105:6,37,105:10,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:6" +
-",38,105:10,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:13,39,105:3,-1:8,105," +
-"-1:2,105:2,-1:9,105:2,51,-1:8,105:17,-1:8,40,-1:2,105:2,-1:9,105:2,51,-1:8," +
-"105:6,41,105:10,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:5,42,105:11,-1:8" +
-",105,-1:2,105:2,-1:9,105:2,51,-1:8,105:6,43,105:10,-1:8,105,-1:2,105:2,-1:9" +
-",105:2,51,-1:8,105,53,105:15,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:8,5" +
-"5,105:8,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:8,57,105:8,-1:8,105,-1:2" +
-",105:2,-1:9,105:2,51,-1:8,59,105:16,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8," +
-"105:17,-1:8,61,-1:2,105:2,-1:9,105:2,51,-1:8,105:8,63,105:8,-1:8,105,-1:2,1" +
-"05:2,-1:9,105:2,51,-1:8,105:2,64,105:14,-1:8,105,-1:2,105:2,-1:9,105:2,51,-" +
-"1:8,105:2,65,105:14,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:9,66,105:7,-" +
-"1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:9,67,105:7,-1:8,105,-1:2,105:2,-1" +
-":9,105:2,51,-1:8,105:4,68,105:12,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105" +
-":16,69,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105,71,105:15,-1:8,105,-1:2,1" +
-"05,86,-1:9,105:2,51,-1:8,105:16,72,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,1" +
-"05:7,73,105:9,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:10,74,105:6,-1:8,1" +
-"05,-1:2,105,103,-1:9,105:2,51,-1:8,105:17,-1:8,75,-1:2,105:2,-1:9,105:2,51," +
-"-1:8,105:10,76,105:6,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:6,77,105:10" +
-",-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:10,78,105:6,-1:8,105,-1:2,105:2" +
-",-1:9,105:2,51,-1:8,105:17,-1:8,105,-1:2,105,79,-1:9,105:2,51,-1:8,105,80,1" +
-"05:15,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:10,81,105:6,-1:8,105,-1:2," +
-"105:2,-1:9,105:2,51,-1:8,105:9,87,105:7,-1:8,105,-1:2,105:2,-1:9,105:2,51,-" +
-"1:8,105:12,88,105:4,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:6,89,105:10," +
-"-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,90,105:16,-1:8,105,-1:2,105:2,-1:9,1" +
-"05:2,51,-1:8,105:3,91,105:13,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105,92," +
-"105:15,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:6,93,105:4,94,105:5,-1:8," +
-"105,-1:2,105:2,-1:9,105:2,51,-1:8,105:5,95,105:11,-1:8,105,-1:2,105:2,-1:9," +
-"105:2,51,-1:8,105:2,97,105:14,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:15" +
-",98,105,-1:8,105,-1:2,105:2,-1:9,105:2,51,-1:8,105:9,104,105:7,-1:8,105,-1:" +
-"2,105:2,-1:9,105:2,51,-1:8,105:5,102,105:11,-1:8,105,-1:2,105:2,-1:9,105:2," +
-"51,-1:7");
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
+"1,2,105,85,105:2,86,87,105,101,102,105:2,46,105,106,72,105,3:2,4,47,5,6,7,8" +
+",105,9,10,105:2,11,12,48,13,14,15,10,16,-1,73,105,17,18,19,20,21,22,23,24,-" +
+"1:51,105,103,105:15,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:29,47,-1:50,26,-1:" +
+"53,27,-1:44,28,-1:28,45:18,-1,45:16,-1,51,-1,45:11,-1,53:18,-1,53:16,-1,55," +
+"-1,53:11,-1:42,17,-1:8,105:17,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,27:18," +
+"-1,27:19,-1,27:10,-1,45:18,-1,45:16,31,51,-1,45:11,-1,105:15,25,105,-1:8,10" +
+"5,-1:2,98,105,-1:9,105:2,52,-1:40,29,-1:17,53:18,-1,53:16,-1,55,32,53:11,-1" +
+",45:17,57,59,45:16,49,51,45:12,-1:42,52,-1:8,105:9,30,105:7,-1:8,105,-1:2,1" +
+"05:2,-1:9,105:2,52,-1:8,53:17,61,63,53:17,55,50,53:11,-1,105:9,33,105:7,-1:" +
+"8,105,-1:2,105:2,-1:9,105:2,52,-1:8,45:17,57,59,45:16,31,51,-1,45:11,-1,105" +
+":5,34,105:11,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:25,59:2,-1:17,45,-1:13,10" +
+"5:5,35,105:11,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,53:17,61,63,53:16,-1,5" +
+"5,32,53:11,-1,105:5,36,105:11,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:25,63:2," +
+"-1:17,53,-1:13,105:2,37,105:14,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:6" +
+",38,105:10,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:6,39,105:10,-1:8,105," +
+"-1:2,105:2,-1:9,105:2,52,-1:8,105:13,40,105:3,-1:8,105,-1:2,105:2,-1:9,105:" +
+"2,52,-1:8,105:17,-1:8,41,-1:2,105:2,-1:9,105:2,52,-1:8,105:6,42,105:10,-1:8" +
+",105,-1:2,105:2,-1:9,105:2,52,-1:8,105:5,43,105:11,-1:8,105,-1:2,105:2,-1:9" +
+",105:2,52,-1:8,105:6,44,105:10,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:1" +
+"0,77,105:6,-1:8,105,-1:2,105,54,-1:9,105:2,52,-1:8,105,56,105:15,-1:8,105,-" +
+"1:2,105:2,-1:9,105:2,52,-1:8,105:8,58,105:8,-1:8,105,-1:2,105:2,-1:9,105:2," +
+"52,-1:8,105:8,60,105:8,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,62,105:16,-1:" +
+"8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:17,-1:8,64,-1:2,105:2,-1:9,105:2,52" +
+",-1:8,105:8,65,105:8,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:2,66,105:14" +
+",-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:2,67,105:14,-1:8,105,-1:2,105:2" +
+",-1:9,105:2,52,-1:8,105:9,68,105:7,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,1" +
+"05:9,69,105:7,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:4,70,105:12,-1:8,1" +
+"05,-1:2,105:2,-1:9,105:2,52,-1:8,105:16,71,-1:8,105,-1:2,105:2,-1:9,105:2,5" +
+"2,-1:8,105,74,105:15,-1:8,105,-1:2,105,88,-1:9,105:2,52,-1:8,105:16,75,-1:8" +
+",105,-1:2,105:2,-1:9,105:2,52,-1:8,105:7,76,105:9,-1:8,105,-1:2,105:2,-1:9," +
+"105:2,52,-1:8,105:17,-1:8,78,-1:2,105:2,-1:9,105:2,52,-1:8,105:10,79,105:6," +
+"-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:6,80,105:10,-1:8,105,-1:2,105:2," +
+"-1:9,105:2,52,-1:8,105:10,81,105:6,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,1" +
+"05:17,-1:8,105,-1:2,105,82,-1:9,105:2,52,-1:8,105,83,105:15,-1:8,105,-1:2,1" +
+"05:2,-1:9,105:2,52,-1:8,105:10,84,105:6,-1:8,105,-1:2,105:2,-1:9,105:2,52,-" +
+"1:8,105:9,89,105:7,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:12,90,105:4,-" +
+"1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:6,91,105:10,-1:8,105,-1:2,105:2,-" +
+"1:9,105:2,52,-1:8,92,105:16,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:3,93" +
+",105:13,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105,94,105:15,-1:8,105,-1:2," +
+"105:2,-1:9,105:2,52,-1:8,105:6,95,105:4,96,105:5,-1:8,105,-1:2,105:2,-1:9,1" +
+"05:2,52,-1:8,105:5,97,105:11,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:2,9" +
+"9,105:14,-1:8,105,-1:2,105:2,-1:9,105:2,52,-1:8,105:15,100,105,-1:8,105,-1:" +
+"2,105:2,-1:9,105:2,52,-1:8,105:5,104,105:11,-1:8,105,-1:2,105:2,-1:9,105:2," +
+"52,-1:7");
 
 	public Token getToken ()
 		throws java.io.IOException {
@@ -699,14 +476,7 @@ private static String Quoted ="";
 					case -2:
 						break;
 					case 2:
-<<<<<<< HEAD
-						{
-	String str =  yytext().substring(1,yytext().length());
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-=======
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 					case -3:
 						break;
 					case 3:
@@ -739,7 +509,7 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 						break;
 					case 10:
 						{
-  return new Token(Token.ERROR, "Invalid input: " + yytext());
+  return new Token(Token.ERROR, "Invalid input " + yytext());
 }
 					case -11:
 						break;
@@ -762,14 +532,14 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 					case 15:
 						{
 	String str =  yytext().substring(1,yytext().length());
-return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
+return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
 }
 					case -16:
 						break;
 					case 16:
 						{
 	String str =  yytext().substring(1,yytext().length());
-return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline));
+return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line "+yyline));
 }
 					case -17:
 						break;
@@ -797,7 +567,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 		} else {
 			Stack<Character> temp_stack = new Stack<Character>();
 			temp_stack.push(temp);
-			close_paran = true;
+			boolean close_paran = true;
 			while(!stack_char.isEmpty()) {
 				temp = stack_char.pop();
 				temp_stack.push(temp);
@@ -811,19 +581,14 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			if(close_paran) {
 				return (new Token(Token.ERROR, ") has no matching ( in line " + (yyline+1)));
 			} else {
+				if(temp == '{') {
+					curly = true;
+				}
+				if(temp == '[') {
+					square = true;
+				}
 				return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
-			}
-			//if(temp =='[') {
-			//	square = true;
-			// }
-			// else {
-			// 	if(temp == '{') {
-			// 		curly = true;
-			// 		return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
-			// 	} else {
-			// 		close_paran = true;
-			// 	}
-			// }		
+			}		
 		}
 	}
 					case -22:
@@ -836,7 +601,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			} else {
 				Stack<Character> temp_stack = new Stack<Character>();
 				temp_stack.push(temp);
-				close_square = true;
+				boolean close_square = true;
 				while(!stack_char.isEmpty()) {
 					temp = stack_char.pop();
 					temp_stack.push(temp);
@@ -850,19 +615,14 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 				if(close_square) {
 					return (new Token(Token.ERROR, "] has no matching [ in line " + (yyline+1)));
 				} else {
+					if(temp == '(') {
+						paran = true;
+					}
+					if(temp == '{') {
+						curly = true;
+					}					
 					return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
-				}
-				// if(temp == '(') {
-				// 	paran = true;
-				// 	return ( new Token(Token.ERROR, "You have a missing bracket in line "  + (yyline+1)));
-				// } else {
-				// 	if(temp == '{') {
-				// 		curly = true;
-				// 		return ( new Token(Token.ERROR, "You have a missing bracket in line "  + (yyline+1)));
-				// 	} else {
-				// 		return (new Token(Token.ERROR, "] has no matching [ in line " + (yyline+1)));
-				// 	}
-				// }
+				} 
 			}
 		}
 					case -23:
@@ -875,11 +635,11 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 		} else {
 			Stack<Character> temp_stack = new Stack<Character>();
 			temp_stack.push(temp);
-			close_curly = true;
+			boolean close_curly = true;
 			while(!stack_char.isEmpty()) {
 				temp = stack_char.pop();
 				temp_stack.push(temp);
-				if(temp == '[') {
+				if(temp == '{') {
 					close_curly = false;
 				}
 			}
@@ -889,19 +649,15 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			if(close_curly) {
 				return (new Token(Token.ERROR, "} has no matching { in line " + (yyline+1)));
 			} else {
+				temp = stack_char.peek();
+				if(temp == '(') {
+					paran = true;
+				}
+				if(temp == '[') {
+					square = true;
+				}
 				return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
 			}
-			// if(temp =='[') {
-			// 	square = true;
-			// 	return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
-			// } else {
-			// 	if(temp == '(') {
-			// 		paran = true;
-			// 		return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
-			// 	} else{
-			// 		return (new Token(Token.ERROR, "} has no matching { in line " + (yyline+1)));
-			// 	}
-			// }
 		}
 	}
 					case -24:
@@ -911,17 +667,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 					case -25:
 						break;
 					case 25:
-<<<<<<< HEAD
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-=======
 						{ return (new Token(Token.IF,yytext()));}
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 					case -26:
 						break;
 					case 26:
@@ -941,13 +687,7 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 					case -30:
 						break;
 					case 30:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
-}
+						{ return (new Token(Token.FOR,yytext()));}
 					case -31:
 						break;
 					case 31:
@@ -956,156 +696,93 @@ return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline
 	if(str.length() == yytext().length() - 2)
 	return (new Token(Token.STRING_LIT, yytext()));
 	else
-	return (new Token(Token.ERROR, "STRING ERROR"));
+return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
 }
 					case -32:
 						break;
 					case 32:
-						{ return (new Token(Token.VAR,yytext()));}
+						{
+	String str =  yytext().substring(1,yytext().length() - 1);
+	if(str.length() == yytext().length() - 2)
+	return (new Token(Token.STRING_LIT, yytext()));
+	else
+	return (new Token(Token.ERROR, "STRING ERROR"));
+}
 					case -33:
 						break;
 					case 33:
-<<<<<<< HEAD
-						{ return (new Token(Token.FOR,yytext()));}
+						{ return (new Token(Token.VAR,yytext()));}
 					case -34:
 						break;
 					case 34:
-						{ return (new Token(Token.VAR,yytext()));}
+						{ return (new Token(Token.CASE,yytext()));}
 					case -35:
 						break;
 					case 35:
-						{ return (new Token(Token.CASE,yytext()));}
+						{ return (new Token(Token.ELSE,yytext()));}
 					case -36:
 						break;
 					case 36:
-						{ return (new Token(Token.ELSE,yytext()));}
+						{ return (new Token(Token.TYPE,yytext()));}
 					case -37:
 						break;
 					case 37:
-						{ return (new Token(Token.TYPE,yytext()));}
+						{ return (new Token(Token.FUNC,yytext()));}
 					case -38:
 						break;
 					case 38:
-						{ return (new Token(Token.FUNC,yytext()));}
+						{ return (new Token(Token.CONST,yytext()));}
 					case -39:
 						break;
 					case 39:
-						{ return (new Token(Token.CONST,yytext()));}
+						{ return (new Token(Token.STRUCT,yytext()));}
 					case -40:
 						break;
 					case 40:
-						{ return (new Token(Token.STRUCT,yytext()));}
+						{ return (new Token(Token.SWITCH,yytext()));}
 					case -41:
 						break;
 					case 41:
-						{ return (new Token(Token.SWITCH,yytext()));}
+						{ return (new Token(Token.RETURN,yytext()));}
 					case -42:
 						break;
 					case 42:
-						{ return (new Token(Token.RETURN,yytext()));}
+						{ return (new Token(Token.IMPORT,yytext()));}
 					case -43:
 						break;
 					case 43:
-						{ return (new Token(Token.IMPORT,yytext()));}
+						{ return (new Token(Token.PACKAGE,yytext()));}
 					case -44:
 						break;
 					case 44:
-						{ return (new Token(Token.PACKAGE,yytext()));}
-					case -45:
-						break;
-					case 45:
 						{ return (new Token(Token.DEFAULT,yytext()));}
-=======
-						{ return (new Token(Token.CASE,yytext()));}
-					case -34:
-						break;
-					case 34:
-						{ return (new Token(Token.ELSE,yytext()));}
-					case -35:
-						break;
-					case 35:
-						{ return (new Token(Token.TYPE,yytext()));}
-					case -36:
-						break;
-					case 36:
-						{ return (new Token(Token.FUNC,yytext()));}
-					case -37:
-						break;
-					case 37:
-						{ return (new Token(Token.CONST,yytext()));}
-					case -38:
-						break;
-					case 38:
-						{ return (new Token(Token.STRUCT,yytext()));}
-					case -39:
-						break;
-					case 39:
-						{ return (new Token(Token.SWITCH,yytext()));}
-					case -40:
-						break;
-					case 40:
-						{ return (new Token(Token.RETURN,yytext()));}
-					case -41:
-						break;
-					case 41:
-						{ return (new Token(Token.IMPORT,yytext()));}
-					case -42:
-						break;
-					case 42:
-						{ return (new Token(Token.PACKAGE,yytext()));}
-					case -43:
-						break;
-					case 43:
-						{ return (new Token(Token.DEFAULT,yytext()));}
-					case -44:
-						break;
-					case 45:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -45:
 						break;
 					case 46:
-						{ return (new Token(Token.REL_OP,yytext()));}
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -46:
 						break;
 					case 47:
-						{
-  return new Token(Token.ERROR, "Invalid input: " + yytext());
-}
+						{ return (new Token(Token.REL_OP,yytext()));}
 					case -47:
 						break;
 					case 48:
-<<<<<<< HEAD
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
+						{
+  return new Token(Token.ERROR, "Invalid input " + yytext());
+}
 					case -48:
 						break;
 					case 49:
-						{ return (new Token(Token.REL_OP,yytext()));}
+						{
+	String str =  yytext().substring(1,yytext().length() - 1);
+	if(str.length() == yytext().length() - 2)
+	return (new Token(Token.STRING_LIT, yytext()));
+	else
+return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
+}
 					case -49:
 						break;
 					case 50:
-=======
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-<<<<<<< HEAD
-					case -50:
-						break;
-					case 51:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-					case -51:
-						break;
-					case 52:
-=======
-					case -48:
-						break;
-					case 49:
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 						{
 	String str =  yytext().substring(1,yytext().length() - 1);
 	if(str.length() == yytext().length() - 2)
@@ -1113,136 +790,29 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 	else
 	return (new Token(Token.ERROR, "STRING ERROR"));
 }
-<<<<<<< HEAD
-					case -52:
+					case -50:
+						break;
+					case 52:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
+					case -51:
 						break;
 					case 54:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -53:
-						break;
-					case 55:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-					case -54:
-						break;
-					case 56:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-					case -55:
-						break;
-					case 57:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-	return (new Token(Token.ERROR, "STRING ERROR"));
-}
-					case -56:
-						break;
-					case 59:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -57:
-						break;
-					case 60:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-					case -58:
-						break;
-					case 61:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-					case -59:
-						break;
-					case 62:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-	return (new Token(Token.ERROR, "STRING ERROR"));
-}
-					case -60:
-						break;
-					case 64:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -61:
-						break;
-					case 65:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-					case -62:
-						break;
-					case 66:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-					case -63:
-						break;
-					case 67:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-	return (new Token(Token.ERROR, "STRING ERROR"));
-}
-					case -64:
-						break;
-					case 69:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -65:
-						break;
-					case 70:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-					case -66:
-						break;
-					case 72:
-=======
-					case -49:
-						break;
-					case 51:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -50:
-						break;
-					case 53:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -51:
-						break;
-					case 55:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -52:
 						break;
-					case 57:
+					case 56:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -53:
 						break;
-					case 59:
+					case 58:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -54:
 						break;
-					case 61:
+					case 60:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -55:
 						break;
-					case 63:
+					case 62:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -56:
 						break;
@@ -1287,11 +857,10 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 					case -66:
 						break;
 					case 74:
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -67:
 						break;
-					case 74:
+					case 75:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -68:
 						break;
@@ -1299,66 +868,6 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -69:
 						break;
-<<<<<<< HEAD
-					case 78:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -70:
-						break;
-					case 80:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -71:
-						break;
-					case 82:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -72:
-						break;
-					case 84:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -73:
-						break;
-					case 86:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -74:
-						break;
-					case 88:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -75:
-						break;
-					case 90:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -76:
-						break;
-					case 144:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -77:
-						break;
-					case 146:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-					case -78:
-						break;
-					case 147:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-	return (new Token(Token.ERROR, "STRING ERROR"));
-}
-					case -79:
-						break;
-					case 148:
-						{
-	String str =  yytext().substring(1,yytext().length() - 1);
-	if(str.length() == yytext().length() - 2)
-	return (new Token(Token.STRING_LIT, yytext()));
-	else
-return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
-}
-					case -80:
-						break;
-					case 149:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-=======
 					case 77:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -70:
@@ -1405,20 +914,14 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 						break;
 					case 88:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 					case -81:
 						break;
 					case 89:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -82:
 						break;
-<<<<<<< HEAD
-					case 153:
-						{ return (new Token(Token.STRING_LIT,yytext()));}
-=======
 					case 90:
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 					case -83:
 						break;
 					case 91:
@@ -1485,77 +988,6 @@ return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+
 						{ return (new Token(Token.IDENTIFIER,yytext()));}
 					case -99:
 						break;
-<<<<<<< HEAD
-					case 170:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -100:
-						break;
-					case 171:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -101:
-						break;
-					case 172:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -102:
-						break;
-					case 173:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -103:
-						break;
-					case 174:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -104:
-						break;
-					case 175:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -105:
-						break;
-					case 176:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -106:
-						break;
-					case 177:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -107:
-						break;
-					case 178:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -108:
-						break;
-					case 179:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -109:
-						break;
-					case 180:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -110:
-						break;
-					case 181:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -111:
-						break;
-					case 182:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -112:
-						break;
-					case 183:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -113:
-						break;
-					case 184:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -114:
-						break;
-					case 185:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -115:
-						break;
-					case 186:
-						{ return (new Token(Token.IDENTIFIER,yytext()));}
-					case -116:
-						break;
-=======
->>>>>>> 42234a5a1fc9c3b41a6a1ff3dc60193d7a250846
 					default:
 						yy_error(YY_E_INTERNAL,false);
 					case -1:
