@@ -1,7 +1,9 @@
 import java.lang.System;
 import java.io.*;
+import java.util.Stack;
 class Lexer {
 	Yylex tokenizer;
+	boolean end = false;
 	public  Lexer(String fileName) 
 	{
 	  try
@@ -17,7 +19,12 @@ class Lexer {
 		Token next=null;
 		try
 		{
-		 next=  tokenizer.getToken();
+			//if(!end) {
+				 next=  tokenizer.getToken();
+				 if(next.getTokenType() == 48) {
+			 		end = true;
+			 	}		
+			//}
 		}
 		catch(Exception e)
 		{
@@ -41,6 +48,10 @@ class Yylex {
 private int Quote_count = 0;
 private static String Quoted ="";
 	//initialize  variables to be used by class
+	private Stack<Character> stack_char = new Stack<Character>();
+	boolean paran = false;
+	boolean square = false;
+	boolean curly = false;
 	private java.io.BufferedReader yy_reader;
 	private int yy_buffer_index;
 	private int yy_buffer_read;
@@ -401,6 +412,35 @@ private static String Quoted ="";
 		/* 160 */ YY_NO_ANCHOR
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
+<<<<<<< HEAD
+"2:8,12:2,13,2:2,0,2:18,12,2,1,2:2,32,31,2,35,38,18,16,33,17,41,42,4:10,29,3" +
+"0,14,15,14,2:2,5:26,36,2,39,2:2,3,7,5,8,5,11,28,10,5,23,5,9,26,24,22,25,6,5" +
+",19,27,20,21,34,5:4,37,2,40,2:2,43:2")[0];
+
+	private int yy_rmap[] = unpackFromString(1,71,
+"0,1,2,3,4:2,5,4:3,6,4:13,3,4:2,3:7,7,4,8,7,9:2,10,11,12,13,14,15,16,17,18,1" +
+"9,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40")[0];
+
+	private int yy_nxt[][] = unpackFromString(41,44,
+"-1,1,35,39,2,3,70,3,64,3:2,58,4:2,5,6,7,8,9,68,3:3,36,3:4,59,10,11,42,12,13" +
+",50,14,15,16,17,18,19,20,21,22,-1,34:12,-1,34:29,-1:5,2,-1:43,40,3:7,-1:7,3" +
+":10,-1:5,3,-1:68,5,-1:43,25,-1:29,37,34:11,-1,34:29,-1:5,40,3:7,-1:7,3:5,66" +
+",3:3,24,-1:5,3,-1:12,23,38,51:7,-1:7,51:10,-1:5,51,-1:13,40,-1:42,23,41,-1:" +
+"70,26,-1:16,40,3:7,-1:7,27,3:9,-1:5,3,-1:13,40,3:6,28,-1:7,3:10,-1:5,3,-1:1" +
+"3,40,3:3,29,3:3,-1:7,3:10,-1:5,3,-1:13,40,3:7,-1:7,3,30,3:8,-1:5,3,-1:13,40" +
+",3:7,-1:7,3:3,31,3:6,-1:5,3,-1:13,40,3:7,-1:7,3,32,3:8,-1:5,3,-1:13,40,3:6," +
+"33,-1:7,3:10,-1:5,3,-1:13,40,3:2,43,3:4,-1:7,3:10,-1:5,3,-1:12,23,41,51:7,-" +
+"1:7,51:10,-1:5,51,-1:13,40,3:7,-1:7,3:8,44,3,-1:5,3,-1:13,40,3:7,-1:7,3:3,4" +
+"5,3:6,-1:5,3,-1:13,40,3:7,-1:7,3:8,46,3,-1:5,3,-1:13,40,3:7,-1:7,47,3:9,-1:" +
+"5,3,-1:13,40,3:7,-1:7,48,3:9,-1:5,3,-1:13,40,3:5,49,3,-1:7,3:10,-1:5,3,-1:1" +
+"3,40,3:7,-1:7,3:7,52,3:2,-1:5,3,-1:13,40,3:7,-1:7,3:2,53,3:7,-1:5,3,-1:13,4" +
+"0,3:7,-1:7,3:3,54,3:6,-1:5,3,-1:13,40,3:7,-1:7,3:2,55,3:7,-1:5,3,-1:13,40,3" +
+":7,-1:7,3:6,56,3:3,-1:5,3,-1:13,40,3:2,57,3:4,-1:7,3:10,-1:5,3,-1:13,40,3:7" +
+",-1:7,3:6,60,3:3,-1:5,3,-1:13,40,3:7,-1:7,3,61,3:8,-1:5,3,-1:13,40,3,62,3:5" +
+",-1:7,3:10,-1:5,3,-1:13,40,3:4,63,3:2,-1:7,3:10,-1:5,3,-1:13,40,3:6,65,-1:7" +
+",3:10,-1:5,3,-1:13,40,3:3,67,3:3,-1:7,3:10,-1:5,3,-1:13,40,3:2,69,3:4,-1:7," +
+"3:10,-1:5,3,-1:9");
+=======
 "28:8,18:2,19,28:2,39,28:18,18,28,36,28:2,34,33,28,41,42,25,23,35,24,47,27,4" +
 "8:10,31,32,20,22,21,28:2,49:26,43,37,44,28:2,38,2,49,3,15,6,16,5,14,13,49,4" +
 ",17,29,26,30,1,49,10,9,7,11,40,12,49,8,49,45,28,46,28:2,0:2")[0];
@@ -482,6 +522,7 @@ private static String Quoted ="";
 "52,159,-1,159:2,153,159:14,-1:8,159,-1:2,159:2,-1:9,159,-1:7,52,159,-1,159:" +
 "15,154,159,-1:8,159,-1:2,159:2,-1:9,159,-1:7,52,159,-1,159:5,158,159:11,-1:" +
 "8,159,-1:2,159:2,-1:9,159,-1:7,52,159");
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 
 	public Token getToken ()
 		throws java.io.IOException {
@@ -507,7 +548,18 @@ private static String Quoted ="";
 			if (YY_EOF == yy_lookahead && true == yy_initial) {
 
 //Add code to be executed when the end of the file is reached
-{return (new Token(Token.EOF,"Done"));}
+	{
+		if(paran) {
+			return (new Token(Token.EOF, "There is some ( that is not closed"));
+		}
+		if(square) {
+			return (new Token(Token.EOF, "There is some [ that is not closed"));
+		}
+		if(curly) {
+			return (new Token(Token.EOF, "There is some {} that is not closed"));
+		}
+		return (new Token(Token.EOF,"Done"));
+	}
 			}
 			if (YY_F != yy_next_state) {
 				yy_state = yy_next_state;
@@ -530,6 +582,43 @@ private static String Quoted ="";
 					yy_to_mark();
 					switch (yy_last_accept_state) {
 					case 1:
+<<<<<<< HEAD
+						{
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
+					case -2:
+						break;
+					case 2:
+						{ return (new Token(Token.INT_LIT,yytext()));}
+					case -3:
+						break;
+					case 3:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
+					case -4:
+						break;
+					case 4:
+						{}
+					case -5:
+						break;
+					case 5:
+						{ return (new Token(Token.REL_OP,yytext()));}
+					case -6:
+						break;
+					case 6:
+						{ return (new Token(Token.EQUAL,yytext()));}
+					case -7:
+						break;
+					case 7:
+						{ return (new Token(Token.PLUS,yytext()));}
+					case -8:
+						break;
+					case 8:
+						{ return (new Token(Token.MINUS,yytext()));}
+					case -9:
+						break;
+					case 9:
+						{ return (new Token(Token.ASTRISK,yytext()));}
+=======
 						
 					case -2:
 						break;
@@ -563,15 +652,88 @@ private static String Quoted ="";
 						break;
 					case 9:
 						{ return (new Token(Token.SLASH,yytext()));}
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 					case -10:
 						break;
 					case 10:
-						{
-  return new Token(Token.ERROR, "Invalid input: " + yytext());
-}
+						{ return (new Token(Token.COLON,yytext()));}
 					case -11:
 						break;
 					case 11:
+<<<<<<< HEAD
+						{ return (new Token(Token.SEMI_COLON,yytext()));}
+					case -12:
+						break;
+					case 12:
+						{ return (new Token(Token.PERCENT,yytext()));}
+					case -13:
+						break;
+					case 13:
+						{ return (new Token(Token.COMMA,yytext()));}
+					case -14:
+						break;
+					case 14:
+						{ stack_char.push('('); return (new Token(Token.OPEN_PARAN,yytext()));}
+					case -15:
+						break;
+					case 15:
+						{ stack_char.push('[');return (new Token(Token.OPEN_SQUARE,yytext()));}
+					case -16:
+						break;
+					case 16:
+						{ stack_char.push('{');return (new Token(Token.OPEN_CURLY,yytext()));}
+					case -17:
+						break;
+					case 17:
+						{ 
+		Character temp = stack_char.pop();
+		if(temp == '(') {
+			return (new Token(Token.CLOSE_PARAN,yytext()));
+		} else {
+			if(temp =='[') {
+				square = true;
+			}
+			if(temp == '{') {
+				curly = true;
+			}
+			return (new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
+		}
+	}
+					case -18:
+						break;
+					case 18:
+						{ 
+		Character temp = stack_char.pop();
+			if(temp == '[') {
+				return (new Token(Token.CLOSE_SQUARE,yytext()));
+			} else {
+				if(temp == '(') {
+					paran = true;
+				}
+				if(temp == '{') {
+					curly = true;
+				}
+				return ( new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
+			}
+		}
+					case -19:
+						break;
+					case 19:
+						{ 
+		Character temp = stack_char.pop();
+		if(temp == '{') {
+			return (new Token(Token.CLOSE_CURLY,yytext()));
+		} else {
+			if(temp =='[') {
+				square = true;
+			}
+			if(temp == '(') {
+				paran = true;
+			}
+			return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
+		}
+	}
+=======
 						{ return (new Token(Token.COLON,yytext()));}
 					case -12:
 						break;
@@ -611,6 +773,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 						break;
 					case 19:
 						{ return (new Token(Token.OPEN_SQUARE,yytext()));}
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 					case -20:
 						break;
 					case 20:
@@ -626,6 +789,21 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 					case -23:
 						break;
 					case 23:
+<<<<<<< HEAD
+						{ return (new Token(Token.STRING_LIT,yytext()));}
+					case -24:
+						break;
+					case 24:
+						{ return (new Token(Token.IF,yytext()));}
+					case -25:
+						break;
+					case 25:
+						{ return (new Token(Token.COLON_EQUAL,yytext()));}
+					case -26:
+						break;
+					case 26:
+						{ return (new Token(Token.AND_OP,yytext()));}
+=======
 						{ return (new Token(Token.DOT,yytext()));}
 					case -24:
 						break;
@@ -639,6 +817,7 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 						break;
 					case 26:
 						{ return (new Token(Token.INCREMENT,yytext()));}
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 					case -27:
 						break;
 					case 27:
@@ -681,18 +860,49 @@ return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline
 						{ return (new Token(Token.VAR,yytext()));}
 					case -34:
 						break;
+<<<<<<< HEAD
+					case 35:
+						{
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
+					case -35:
+						break;
+					case 36:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
+=======
 					case 34:
 						{ return (new Token(Token.CASE,yytext()));}
 					case -35:
 						break;
 					case 35:
 						{ return (new Token(Token.ELSE,yytext()));}
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 					case -36:
 						break;
 					case 36:
 						{ return (new Token(Token.TYPE,yytext()));}
 					case -37:
 						break;
+<<<<<<< HEAD
+					case 39:
+						{
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
+					case -38:
+						break;
+					case 40:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
+					case -39:
+						break;
+					case 42:
+						{
+  return new Token(Token.ERROR, "Invalid input: " + yytext());
+}
+					case -40:
+						break;
+					case 43:
+						{ return (new Token(Token.IDENTIFIER,yytext()));}
+=======
 					case 37:
 						{ return (new Token(Token.FUNC,yytext()));}
 					case -38:
@@ -707,6 +917,7 @@ return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline
 						break;
 					case 40:
 						{ return (new Token(Token.SWITCH,yytext()));}
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 					case -41:
 						break;
 					case 41:
