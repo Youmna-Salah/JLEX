@@ -18,7 +18,11 @@ import java.io.IOException;
  */
 public class MLA {
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		String inFile = "Go4.in";
+=======
+		String inFile = "Go10.in";
+>>>>>>> 4f585a2128e2223726d9955e3341b8ee99c27559
 		String outFile = "Go11.out";
 
 		if (args.length > 1) {
