@@ -483,7 +483,7 @@ class Yylex {
 			if(temp == '{') {
 				curly = true;
 			}
-			return (new Token(Token.ERROR, "You have a missing bracket"));
+			return (new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
 		}
 	}
 					case -18:
@@ -500,7 +500,7 @@ class Yylex {
 				if(temp == '{') {
 					curly = true;
 				}
-				return ( new Token(Token.ERROR, "You have a missing bracket"));
+				return ( new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
 			}
 		}
 					case -19:
