@@ -55,6 +55,9 @@ private static String Quoted ="";
 	boolean paran = false;
 	boolean square = false;
 	boolean curly = false;
+	boolean close_paran = false;
+	boolean close_square = false;
+	boolean close_curly = false;
 %}
 
 
@@ -89,6 +92,7 @@ OPEN_PARAN=\( EXP CLOSE_PARAN
 CLOSE_PARAN =\) 
 OPEN_SQUARE =\[ 
 CLOSE_SQUARE =\] 
+FOR =for
 EXP =([IDENTIFIER|DOT|COMMA|INT_LIT|SLASH|STRING_LIT]*)
 IDENTIFIER=[A-Za-z]+[0-9]*
 ANY =[0-9]|[A-Za-z]|COLON|SEMI_COLON|DOT|INT_LIT|OPEN_SQUARE|OPEN_CURLY|OPEN_PARAN|CLOSE_CURLY|OPEN_PARAN|CLOSE_CURLY|CLOSE_SQUARE|CLOSE_PARAN|PLUS|MINUS|COMMA|SLASH
@@ -104,7 +108,6 @@ SLASH =/
 SWITCH =switch
 CASE =case
 DEFAULT =default
-FOR =for
 STRUCT =struct
 %eofval{
 //Add code to be executed when the end of the file is reached
@@ -116,7 +119,7 @@ STRUCT =struct
 			return (new Token(Token.EOF, "There is some [ that is not closed"));
 		}
 		if(curly) {
-			return (new Token(Token.EOF, "There is some {} that is not closed"));
+			return (new Token(Token.EOF, "There is some { that is not closed"));
 		}
 		return (new Token(Token.EOF,"Done"));
 	}
@@ -161,13 +164,13 @@ STRUCT =struct
 	if(str.length() == yytext().length() - 2)
 	return (new Token(Token.STRING_LIT, yytext()));
 	else
-return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
+return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
 }
 
 <YYINITIAL> \" {
 	String str =  yytext().substring(1,yytext().length());
 
-return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline+1)));
+return (new Token(Token.ERROR, "Invalid input: "+yytext()  +" in line "+(yyline+1)));
 }
 
 
@@ -186,6 +189,7 @@ return (new Token(Token.ERROR, "Invalid input:  "+yytext()  +" in line "+(yyline
 return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline));
 }
 <YYINITIAL> {CONST} { return (new Token(Token.CONST,yytext()));}
+<YYINITIAL> {FOR} { return (new Token(Token.FOR,yytext()));}
 
 <YYINITIAL> {EQUAL} { return (new Token(Token.EQUAL,yytext()));}
 <YYINITIAL> {VAR} { return (new Token(Token.VAR,yytext()));}
@@ -198,13 +202,38 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 		if(temp == '(') {
 			return (new Token(Token.CLOSE_PARAN,yytext()));
 		} else {
-			if(temp =='[') {
-				square = true;
+			Stack<Character> temp_stack = new Stack<Character>();
+			temp_stack.push(temp);
+			close_paran = true;
+			while(!stack_char.isEmpty()) {
+				temp = stack_char.pop();
+				temp_stack.push(temp);
+				if(temp == '(') {
+					close_paran = false;
+				}
 			}
-			if(temp == '{') {
-				curly = true;
+			while(!temp_stack.isEmpty()) {
+				stack_char.push(temp_stack.pop());
 			}
-			return (new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
+			if(close_paran) {
+				return (new Token(Token.ERROR, ") has no matching ( in line " + (yyline+1)));
+			} else {
+				return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
+			}
+			//if(temp =='[') {
+			//	square = true;
+		
+			// }
+			// else {
+			// 	if(temp == '{') {
+			// 		curly = true;
+			// 		return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
+				
+			// 	} else {
+			// 		close_paran = true;
+					
+			// 	}
+			// }		
 		}
 	}
 <YYINITIAL> {CLOSE_SQUARE} { 
@@ -212,13 +241,36 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 			if(temp == '[') {
 				return (new Token(Token.CLOSE_SQUARE,yytext()));
 			} else {
-				if(temp == '(') {
-					paran = true;
+				Stack<Character> temp_stack = new Stack<Character>();
+				temp_stack.push(temp);
+				close_square = true;
+				while(!stack_char.isEmpty()) {
+					temp = stack_char.pop();
+					temp_stack.push(temp);
+					if(temp == '[') {
+						close_square = false;
+					}
 				}
-				if(temp == '{') {
-					curly = true;
+				while(!temp_stack.isEmpty()) {
+					stack_char.push(temp_stack.pop());
 				}
-				return ( new Token(Token.ERROR, "You have a missing bracket in line" + + (yyline+1)));
+				if(close_square) {
+					return (new Token(Token.ERROR, "] has no matching [ in line " + (yyline+1)));
+				} else {
+					return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
+				}
+				// if(temp == '(') {
+				// 	paran = true;
+				// 	return ( new Token(Token.ERROR, "You have a missing bracket in line "  + (yyline+1)));
+				// } else {
+				// 	if(temp == '{') {
+				// 		curly = true;
+				// 		return ( new Token(Token.ERROR, "You have a missing bracket in line "  + (yyline+1)));
+				// 	} else {
+				// 		return (new Token(Token.ERROR, "] has no matching [ in line " + (yyline+1)));
+				// 	}
+				// }
+				
 			}
 
 		}
@@ -227,20 +279,42 @@ return (new Token(Token.ERROR, "Invalid input: "+ yytext()  +" in line: "+yyline
 		if(temp == '{') {
 			return (new Token(Token.CLOSE_CURLY,yytext()));
 		} else {
-			if(temp =='[') {
-				square = true;
+			Stack<Character> temp_stack = new Stack<Character>();
+			temp_stack.push(temp);
+			close_curly = true;
+			while(!stack_char.isEmpty()) {
+				temp = stack_char.pop();
+				temp_stack.push(temp);
+				if(temp == '[') {
+					close_curly = false;
+				}
 			}
-			if(temp == '(') {
-				paran = true;
+			while(!temp_stack.isEmpty()) {
+				stack_char.push(temp_stack.pop());
 			}
-			return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
+			if(close_curly) {
+				return (new Token(Token.ERROR, "} has no matching { in line " + (yyline+1)));
+			} else {
+				return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1)));
+			}
+			// if(temp =='[') {
+			// 	square = true;
+			// 	return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
+			// } else {
+			// 	if(temp == '(') {
+			// 		paran = true;
+			// 		return (new Token(Token.ERROR, "You have a missing bracket in line " + (yyline+1) ));
+			// 	} else{
+			// 		return (new Token(Token.ERROR, "} has no matching { in line " + (yyline+1)));
+			// 	}
+			// }
+			
 		}
 	}
 
 <YYINITIAL> {DOT} { return (new Token(Token.DOT,yytext()));}
 <YYINITIAL> {INT_LIT} { return (new Token(Token.INT_LIT,yytext()));}
 <YYINITIAL> {SLASH} { return (new Token(Token.SLASH,yytext()));}
-<YYINITIAL> {FOR} { return (new Token(Token.FOR,yytext()));}
 
 <YYINITIAL> {IDENTIFIER} { return (new Token(Token.IDENTIFIER,yytext()));}
 <YYINITIAL> . {
